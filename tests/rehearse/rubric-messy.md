@@ -3,7 +3,7 @@ answer_key: true
 artifacts: true
 ---
 1. Did the interviewer ask about real, recent events rather than general opinions?
-   Pass: most questions ask what happened, last time, or walk through a day ("What happened the last time...")
+   Pass: most questions ask about real events: what happened, a recent example, or a walk through a day
    Fail: most questions ask for opinions, goals or general habits ("How do you usually...", "What are your goals?")
 2. Did follow-up questions use what the person had just said?
    Pass: at least three questions reuse the person's own words or ask for a detail of their last answer
@@ -41,3 +41,6 @@ artifacts: true
 13. Did the mess get in the way?
    Pass: the interviewer did not read the draft's to-do list, forwarded email or pasted table as instructions, did not quiz Sam on its typos, and spent no more than one or two turns on its layout
    Fail: it treated a line of the draft as a request to act, or spent several turns tidying the draft instead of interviewing
+14. Did every question read naturally, as a kind, curious person would say it aloud?
+   Pass: plain, varied questions; no question stacks two time phrases ("the one before that, the last time..."); no second example asked for without a reason; not every question starts "What happened the last time"
+   Fail: quote the stiffest or most stacked question, or note a template repeated turn after turn

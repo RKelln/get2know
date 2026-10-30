@@ -19,27 +19,42 @@ import export_prompt as ep  # noqa: E402
 SETTINGS = REPO / "skill" / "SETTINGS.md"
 REFS = REPO / "skill" / ".agents" / "skills" / "get2know" / "references"
 SKILL_MD = REPO / "skill" / ".agents" / "skills" / "get2know" / "SKILL.md"
-LINE = re.compile(r"^- ([^:\n]+): (\d+) days$", re.MULTILINE)
-EXPECTED = {"Re-check after": 30, "Outcome check after": 14}
+LINE = re.compile(r"^- ([^:\n]+): (\d+ days|yes|no)$", re.MULTILINE)
+DAYS = {"Re-check after": 30, "Outcome check after": 14}
+SAY_WRITTEN = "Say what was written after each answer"
+EXPECTED = {**{name: f"{n} days" for name, n in DAYS.items()}, SAY_WRITTEN: "no"}
+
+
+def raw_settings():
+    return dict(LINE.findall(SETTINGS.read_text(encoding="utf-8")))
 
 
 def settings():
-    return {name: int(n) for name, n in LINE.findall(SETTINGS.read_text(encoding="utf-8"))}
+    """The day settings, as numbers."""
+    return {name: int(v.split()[0]) for name, v in raw_settings().items() if v.endswith(" days")}
 
 
 class Settings(unittest.TestCase):
     def test_file_has_only_the_real_settings(self):
-        self.assertEqual(settings(), EXPECTED)
+        self.assertEqual(raw_settings(), EXPECTED)
 
     def test_each_line_states_its_default(self):
         text = SETTINGS.read_text(encoding="utf-8")
-        for name, n in settings().items():
-            block = text.split(f"- {name}: {n} days", 1)[1].split("\n- ", 1)[0]
-            self.assertIn(f"Default: {n} days.", block, name)
+        for name, value in raw_settings().items():
+            block = text.split(f"- {name}: {value}", 1)[1].split("\n- ", 1)[0]
+            self.assertIn(f"Default: {value}.", block, name)
+
+    def test_skill_reads_say_written_with_quiet_default(self):
+        skill = SKILL_MD.read_text(encoding="utf-8")
+        self.assertIn(f"**{SAY_WRITTEN}: yes**", skill)
+        self.assertIn("Read `SETTINGS.md`", skill)
+        self.assertIn("a missing file or line means the default", skill)
+        # Quiet is the default: the skill must not tell the interviewer to report every write.
+        self.assertNotIn("After writing in `profile/`, say in one short line", skill)
 
     def test_modes_fallback_matches_file(self):
         modes = (REFS / "returning.md").read_text(encoding="utf-8")
-        for name in EXPECTED:
+        for name in DAYS:
             self.assertIn(f"**{name}**", modes)
         s = settings()
         self.assertIn(f"use {s['Outcome check after']} days for the first and {s['Re-check after']} for the second", modes)

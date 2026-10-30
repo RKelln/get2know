@@ -139,6 +139,42 @@ def no_assumed_habit(run):
     return Check.partial(f"check against the transcript: {hits[:5]}") if hits else Check.passed("none found")
 
 
+TIME_PHRASE = re.compile(r"\blast time\b|\bthe time before\b|\bbefore that\b|\bthe one before\b|\bmost recent\b|\brecently\b"
+                         r"|\byesterday\b|\blast (?:week|month|night|year|spring|summer|winter|fall|monday|tuesday|wednesday"
+                         r"|thursday|friday|saturday|sunday|january|february|march|april|may|june|july|august|september"
+                         r"|october|november|december)\b", re.I)
+
+
+def no_stacked_time_phrases(run):
+    """How to sound (2026-10-30, from a live Mac test): no question stacks two time phrases, e.g. "What was the
+    question before that one, the last time a customer wrote at night?". English only. Pass: none; partial: one."""
+    hits = []
+    for i, t in enumerate(run.subject_turns):
+        for sentence in re.split(r"(?<=[.?!])\s+|\n+", t):
+            if sentence.rstrip().endswith("?") and len(TIME_PHRASE.findall(sentence)) >= 2:
+                hits.append((i + 1, sentence.strip()[:100]))
+    if not hits:
+        return Check.passed("none")
+    return Check.partial(f"{hits}") if len(hits) == 1 else Check.failed(f"{hits[:3]}")
+
+
+WROTE_LINE = re.compile(r"\b(?:saved|wrote|written|added|noted|updated|recorded|created|put|kept|marked)\b[^.\n]{0,120}?"
+                        r"(?:profile/|\b(?:how-we-work|limits|ideas|interview-notes|log|README)\.md\b)", re.I)
+
+
+def writes_quietly(run):
+    """Rule 7 (2026-10-30): writes are not reported after every answer by default (SETTINGS.md "Say what was
+    written after each answer: no"). Share of interviewer turns, after the first, that say what was written.
+    Pass <= 35%, partial <= 50%. Before the change, saved codex runs reported a write in 77% of turns."""
+    turns = run.subject_turns[1:]
+    if len(turns) < 4:
+        return Check.skip("too few turns")
+    said = sum(1 for t in turns if WROTE_LINE.search(t))
+    share = said / len(turns)
+    msg = f"{said} of {len(turns)} turns ({share:.0%}) say what was written"
+    return Check.passed(msg) if share <= 0.35 else Check.partial(msg) if share <= 0.5 else Check.failed(msg)
+
+
 def never_asks_for_secrets(run):
     """No interviewer question asks for a password, account or card number, or similar (MVP criterion)."""
     hits = []

@@ -2,6 +2,11 @@
 
 Newest first. Your version number is in the file `VERSION`. To update, see `UPDATE.md`.
 
+## Not released yet
+
+- **Quieter while it writes.** It no longer says "I saved that in..." after every answer. It still says so when it makes a new file or changes something you said earlier, and it reads everything back to you after about 8 answers. To hear a line after every answer again, set **Say what was written after each answer: yes** in `SETTINGS.md`. It also stops thanking you after every answer.
+- **More natural questions.** It asks about real events in more than one way (not always "the last time..."), asks about the example you gave instead of asking for another, and avoids stacked questions like "the one before that, the last time...".
+
 ## 0.1.0 (2026-10-29)
 
 The first numbered version. What it has:

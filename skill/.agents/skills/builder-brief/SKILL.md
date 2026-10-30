@@ -36,7 +36,7 @@ Some things a builder must know may be missing. Look for these, in this order, a
 1. What must never happen with this tool (if `limits.md` says nothing that touches this idea).
 2. Who else must say yes before it is used (partner, bookkeeper, board, funder).
 3. Where the information it needs lives now, and in what form ("a spreadsheet", "paper in a folder", "the shop's email").
-4. One real, recent example of the problem ("the last time an invoice went unpaid, what happened?").
+4. One real, recent example of the problem ("Can you tell me about an invoice that went unpaid? What happened?").
 5. How they would know it worked.
 
 At most **5 questions**, one per message. Facts about how they work now go into `how-we-work.md`; limits go into `limits.md` with `(said: ...)`, exactly as they said them. Anything still missing stays a `GAP:` in the brief. If they offer a file to show you something, read only that file.

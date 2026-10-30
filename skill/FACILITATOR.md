@@ -23,7 +23,7 @@ Starting from earlier notes or a draft profile? It will ask; they say yes and na
 
 1. It says hello, says what will happen, gives the privacy note, asks if there are notes to start from.
 2. With notes: it reads them, makes `profile/`, and names the 3 or 4 gaps that matter most.
-3. One short question at a time. After each answer, one line saying what it wrote.
+3. One short question at a time. It writes as it goes, quietly; it says so when it makes a new file or changes something said earlier. (To hear a line after every answer, set it in `SETTINGS.md`.)
 4. After about 8 answers: a short summary and "Is anything wrong or missing?"
 5. 3 to 5 ideas in `profile/ideas.md`, the top one said out loud, and "stop or keep going?"
 6. Close: where the folder is, one thing to try this week, what next.
@@ -54,7 +54,7 @@ You are the helper: a volunteer, librarian, consultant or friend. The owner is t
 ## Training other helpers
 
 About 45 minutes; no technical background needed.
-1. **Watch one** (10 min): run a session on a made-up business while they watch. Point out the one-question rhythm, the one line after each answer saying what it wrote, and the check-back.
+1. **Watch one** (10 min): run a session on a made-up business while they watch. Point out the one-question rhythm, the files filling up in `profile/` as it goes, and the check-back.
 2. **Play the owner** (15 min): each trainee answers as a made-up owner while another types as the helper. Then swap.
 3. **Read the folder** (10 min): open `profile/` together. Find a `(said: ...)` line, a `(said by helper: ...)` line and a `GAP:`. Ask: would the owner agree with every line?
 4. **Talk through the hard parts** (10 min): the owner goes quiet and the helper wants to fill in; the owner wants to share a customer's details; the owner asks "what should I say?"; the owner is tired (type "let's stop here").
