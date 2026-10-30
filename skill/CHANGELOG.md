@@ -2,7 +2,7 @@
 
 Newest first. Your version number is in the file `VERSION`. To update, see `UPDATE.md`.
 
-## Not released yet
+## 0.2.1 (2026-10-30)
 
 - **Short on time, still one idea.** If you confirm the summary and have to go right away, it still saves one idea and tells it to you in one sentence as you leave.
 
