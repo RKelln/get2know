@@ -1,0 +1,33 @@
+# Records case (DESIGN D62): the bike shop with two Sams: `offers` names his invoice and bank files when money comes
+# up; `declines` will not let the AI open any file, even the draft. Tests rule 6: ask early for records, read only
+# after a yes, mark (file: ...); carry on by asking after a no. Judge: rubric-docs.md question 15.
+# codex in every seat, as case-codex.toml.
+name = "get2know-bike-shop-docs-codex"
+rubric = "rubric-docs.md"
+answer_key = "fixture/answer-key.md"   # the judge only
+checks = "checks.py"
+runs_dir = "runs"
+
+[subject]
+adapter = "agent"
+seat = "codex"
+allowed_tools = ["Read", "Glob", "Grep", "Write(profile/**)", "Edit(profile/**)"]
+opening = "hi"   # each sim sets its own opening
+
+[scenario]
+folder = "fixture/shop"
+exclude = []   # the answer key sits in fixture/, outside this folder
+
+[variants]
+
+[sims]
+seat = "codex"
+dir = "sims-docs"
+frame = "frames/sim.md"
+
+[limits]
+max_turns = 24
+
+[judge]
+seat = "codex"
+default = false

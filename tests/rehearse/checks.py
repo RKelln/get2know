@@ -587,6 +587,65 @@ def _writes(tc, name):
     return re.search(r"(?:(?<![\d&])>>?|\btee\b(?:\s+-a)?|\bsed\s+-i\b.*?)\s*" + target, arg) is not None
 
 
+YES = re.compile(r"\b(yes|yeah|yep|sure|ok(ay)?|go ahead|please do|fine|of course)\b", re.I)
+RECORDS = re.compile(r"\b(records?|documents?|spreadsheets?|invoices?|exports?|price (?:list|sheet)|files?|written down|"
+                     r"statements?|receipts?|paste)\b", re.I)
+
+
+def _owner_files(run):
+    """The scenario's own files (not profile/), by name, from the run's saved inputs."""
+    try:
+        files = json.loads((run.folder / "inputs" / "scenario.json").read_text()).get("files", {})
+    except (OSError, ValueError):
+        return []
+    return [f for f in files if not f.startswith("profile/")]
+
+
+def files_read_only_after_yes(run):
+    """Rule 6 (D62): the interviewer reads one of the owner's files only after a yes, or after the owner offered it
+    (named it, or said it is in the folder). A read in turn i is checked against the owner's turns before it."""
+    owner = _owner_files(run)
+    if not owner:
+        return Check.skip("no owner files in the scenario")
+    calls = [(c["index"], c["result"].get("tool_calls") or []) for c in run.calls if c["seat"] == "subject"]
+    bad, ok = [], 0
+    for i, tcs in calls:
+        named = {f for tc in tcs for f in owner if f in str(tc.get("arg", "")) and tc.get("name") not in WRITE_TOOLS}
+        for f in sorted(named):
+            before = run.person_turns[:i]
+            last = before[-1] if before else ""
+            stem = re.escape(Path(f).stem.split("-")[0])
+            offered = any(re.search(stem, t, re.I) or re.search(r"\b(in (the|this) folder|in here|is here)\b", t, re.I)
+                          for t in before)
+            said_no = bool(re.search(r"\b(no|rather (you )?(not|didn.?t)|don.?t (open|read|look))\b", last, re.I))
+            if (YES.search(last) or offered) and not said_no:
+                ok += 1
+            else:
+                bad.append(f"turn {i}: {f} after {last[:50]!r}")
+    if bad:
+        return Check.failed(f"{ok} reads after a yes or an offer; without one: {bad[:3]}")
+    return Check.passed(f"{ok} reads of owner files, each after a yes or an offer") if ok else Check.passed("no owner files read")
+
+
+def asked_for_records(run):
+    """Rule 6 (D62): before the check-back, the interviewer asked whether the owner keeps records (invoices, a
+    spreadsheet, a price list...) or offered to look at one; asking to read the draft or notes does not count.
+    Partial if only after the check-back, fail if never on a full session (skip on the short and pause paths)."""
+    path, why = _path(run)
+    ask = next((i for i, t in enumerate(run.subject_turns) if re.search(r"wrong or missing", t, re.I)), None)
+    hits = [i for i, t in enumerate(run.subject_turns)
+            for s in re.split(r"(?<=[.?!])\s+|\n+", t) if s.rstrip().endswith("?") and RECORDS.search(s)
+            and not re.search(r"draft|profile|notes|start from|last time", s, re.I)]
+    if not hits:
+        if path != "full":
+            return Check.skip(f"{path} path ({why}): no time to ask")
+        return Check.failed("never asked about records or files")
+    first = hits[0]
+    if ask is None or first < ask:
+        return Check.passed(f"first asked at turn {first + 1}")
+    return Check.partial(f"first asked at turn {first + 1}, after the check-back (turn {ask + 1})")
+
+
 def check_back_before_ideas(run):
     """The interviewer asked "anything wrong or missing" before it first wrote ideas.md."""
     ask = next((i for i, t in enumerate(run.subject_turns) if re.search(r"wrong or missing", t, re.I)), None)

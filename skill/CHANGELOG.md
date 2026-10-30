@@ -2,6 +2,10 @@
 
 Newest first. Your version number is in the file `VERSION`. To update, see `UPDATE.md`.
 
+## Not released yet
+
+- **Asks for your records early.** When talk turns to money, customers or prices, it asks early if you keep anything that shows how it works now (invoices, a spreadsheet, a price list), naming a file it can see in the folder. It reads only after you say yes, and if you say no, it carries on by asking.
+
 ## 0.2.1 (2026-10-30)
 
 - **Short on time, still one idea.** If you confirm the summary and have to go right away, it still saves one idea and tells it to you in one sentence as you leave.
