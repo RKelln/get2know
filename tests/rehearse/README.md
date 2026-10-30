@@ -48,7 +48,7 @@ The base Sam is *not* comfortable with anything sent without seeing it, so the o
 `case-docs-codex.toml`: the clean bike shop with two Sams (`sims-docs/`): `offers` names his invoice and bank files
 the first time money comes up; `declines` opens with no mention of a draft and says no to opening any file, even the
 draft. `frames/sim.md` now says yes to reading files "unless How you type says otherwise". `rubric-docs.md` is
-`rubric.md` plus question 15. Tests D62 (rule 6): ask early for records, read only after a yes, carry on after a no.
+`rubric.md` plus question 15. Tests D62 and D64 (rule 6): records first on a topic, read only after a yes, ask from what they show, carry on after a no.
 
 ## The print-collective cases (made up, no fixture needed)
 

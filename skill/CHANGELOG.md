@@ -2,6 +2,10 @@
 
 Newest first. Your version number is in the file `VERSION`. To update, see `UPDATE.md`.
 
+## Not released yet
+
+- **Your records first.** When talk turns to something your records would show (money, customers, jobs, bookings), its first question is whether you have them handy, and after you say yes it reads them and asks about what it sees, instead of asking you for facts they already hold. If you say no, it asks its usual questions and does not offer again.
+
 ## 0.2.2 (2026-10-30)
 
 - **Asks for your records early.** When talk turns to money, customers or prices, it asks early if you keep anything that shows how it works now (invoices, a spreadsheet, a price list), naming a file it can see in the folder. It reads only after you say yes, and if you say no, it carries on by asking.
