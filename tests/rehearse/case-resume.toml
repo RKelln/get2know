@@ -17,6 +17,7 @@ folder = "scenarios/collective-resume"
 exclude = ["**/.DS_Store"]
 
 [variants]
+skill-fe72a40 = "variants/skill-fe72a40"
 skill-3748b8c = "variants/skill-3748b8c"
 skill-783dcdc = "variants/skill-783dcdc"
 skill-1a96fb7 = "variants/skill-1a96fb7"

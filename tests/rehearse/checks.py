@@ -636,6 +636,12 @@ def asked_for_records(run):
     hits = [i for i, t in enumerate(run.subject_turns)
             for s in re.split(r"(?<=[.?!])\s+|\n+", t) if s.rstrip().endswith("?") and RECORDS.search(s)
             and not re.search(r"draft|profile|notes|start from|last time", s, re.I)]
+    # An owner who refused files before any records question: rule 6 says carry on and do not offer again.
+    # person_turns[0] is the opening, so person turn r answers subject turn r (subject_turns[r - 1]).
+    refused = next((i for i, t in enumerate(run.person_turns) if re.search(
+        r"rather (you )?(not|didn.?t) (open|read|look)|don.?t (open|read|look at) (my|any)", t, re.I)), None)
+    if refused is not None and (not hits or hits[0] >= refused):
+        return Check.passed(f"owner refused files at person turn {refused}; records not asked before that")
     if not hits:
         if path != "full":
             return Check.skip(f"{path} path ({why}): no time to ask")
