@@ -39,5 +39,8 @@ artifacts: true
    Pass: plain, varied questions; no question stacks two time phrases ("the one before that, the last time..."); no second example asked for without a reason; not every question starts "What happened the last time"
    Fail: quote the stiffest or most stacked question, or note a template repeated turn after turn
 13. Did the interview find out how a task is done now before proposing an idea for it?
-   Pass: for each idea's task, the transcript shows the person saying how they do it now (what they use, how long, how often), asked before Ideas; each idea's "Now:" line states it and the idea builds on it
+   Pass: for each idea's task, the transcript shows the person saying how they do it now (what they use, how long, how often), asked before Ideas; each idea's "Now:" line states it and the idea builds on it; where two things the person said did not fit together, it asked what was going on
    Fail: an idea proposes a tool or change for a task whose current way was never asked about (quote the idea), or ignores a way the person described
+14. Did the ideas take work off the person, as far as they allowed, rather than speed up the same work or default to "the owner reads everything"?
+   Pass: for the biggest load, an idea prevents or removes the work where that fits (tell people before they ask, let them look it up), not only one that helps do it faster; the level of automation follows what the person said (limits.md, or their answer when asked); every idea that sends or acts on its own has guardrails (allowed kinds, what it may never promise, a label, where the rest goes, a log, an off switch); a fact with no up-to-date source gets a source first
+   Fail: every idea makes the person approve each message although they were never asked and limits.md does not say so, or an idea automates beyond what they allowed, or an idea sends without guardrails, or every idea only speeds up work whose cause was plain in the transcript (quote it)

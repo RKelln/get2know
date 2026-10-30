@@ -28,7 +28,7 @@ where those files are silent (marked *decided*). Nothing here comes from the ans
 
 ## Customers
 - Mostly neighbourhood commuters and families, plus the courier company. One office asked about bringing in six bikes.
-- People reach the shop by email (a shared inbox), phone, and walking in. No online booking. Sam texts people when a bike is ready (*decided*).
+- People reach the shop by email (a shared inbox), phone, and walking in. No online booking. Sam texts people when a bike is ready (*decided*). People still email "is my bike ready?" before the text comes, mostly when Sam gave no date at drop-off, or the date passed with no word; Sam usually gives a date only if asked (*decided*, 2026-10-30).
 - "I answer the same ten questions at 10pm." The usual ones: how much is a tune-up or a flat; can you fit me in this week; is my bike ready; do you do e-bikes; can you pick up my bike; what's the warranty; how long before storage fees; do you price match or give student discounts.
 - Hardest: people who are angry their bike is late. One person said they would post a bad review (*decided* from the inbox).
 

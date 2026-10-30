@@ -11,7 +11,7 @@ problems in the shop's files are a separate key, `fixture/answer-key.md`.
 4. The courier company is on 30-day terms but pays 6 or 7 weeks late; Sam emails them when remembered, about once a month.
 5. Biggest costs: rent ($2,400 a month) and parts from one supplier. Sam thinks tune-ups earn the most but has never added it up.
 6. The ten questions: the price of a tune-up or a flat, can you fit me in this week, is my bike ready, e-bikes, pickup, warranty, storage fees, price matching or student discounts.
-7. Customers reach the shop by email, phone and walking in; no online booking; Sam texts when a bike is ready. Hardest: people angry their bike is late (one threatened a bad review).
+7. Customers reach the shop by email, phone and walking in; no online booking; Sam texts when a bike is ready, but people still email "is my bike ready?" before the text, mostly when no date was given at drop-off or the date passed (Sam gives a date only if asked). Hardest: people angry their bike is late (one threatened a bad review).
 8. Hand off first: the "is my bike ready" and price emails, and the Monday typing. Never hand off: deciding what is wrong with a bike, talking to an upset customer, anything about Lena's pay.
 9. Promises: 30-day warranty on labour, the maker's warranty on parts, a $20 deposit on parts orders, $5 a day storage after 14 days' notice. Never sent without Sam seeing it: anything about money someone owes, any reply to a complaint, or any email at all.
 10. Budget: "a few hundred dollars a year, not a monthly bill I forget about".
