@@ -6,6 +6,8 @@ Newest first. Your version number is in the file `VERSION`. To update, see `UPDA
 
 - **Quieter while it writes.** It no longer says "I saved that in..." after every answer. It still says so when it makes a new file or changes something you said earlier, and it reads everything back to you after about 8 answers. To hear a line after every answer again, set **Say what was written after each answer: yes** in `SETTINGS.md`. It also stops thanking you after every answer.
 - **More natural questions.** It asks about real events in more than one way (not always "the last time..."), asks about the example you gave instead of asking for another, and avoids stacked questions like "the one before that, the last time...".
+- **Your words, spelled right.** Quotes in your profile keep your words, but now fix spelling and typos ("i dont no" becomes "I don't know"). It never changes your wording or the way you talk, and it leaves names as you typed them. If one word seems to say the opposite of what you meant ("can" for "can't", "left" for "right"), it asks once which you meant.
+- **Asks how you do it now.** When you mention how you handle a task you want help with, it asks about that before moving on: what you use, how long it takes, how often. Each idea now says how you do the task today and builds on it, instead of suggesting something you already have.
 
 ## 0.1.0 (2026-10-29)
 

@@ -289,33 +289,90 @@ def _qnorm(s):
     return " ".join(s.split())
 
 
-def _verbatim(quote, turns_n):
-    """True if every piece of `quote` (split at ... and [..]) appears, in order, as whole words in one owner turn."""
-    pieces = [_qnorm(p) for p in GAP_MARK.split(quote)]
+# Spelling fixes allowed inside a (said: ...) quote (Ryan, D59): the words stay the owner's, but a misspelled word
+# may be written as the word they clearly meant. Pairs that sound alike but are far apart in letters.
+HOMOPHONES = [{"no", "know"}, {"there", "their", "they're"}, {"your", "you're"}, {"its", "it's"},
+              {"to", "too", "two"}, {"then", "than"}, {"were", "where", "we're"}, {"whose", "who's"}, {"lose", "loose"}]
+
+
+def _lev(a, b):
+    prev = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        cur = [i]
+        for j, cb in enumerate(b, 1):
+            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (ca != cb)))
+        prev = cur
+    return prev[-1]
+
+
+def _spelling_fix(a, b):
+    """How quote word `a` could be owner word `b` with its spelling fixed: "same", "fix", "short" (a one-letter
+    change to a word of 4 letters or fewer, such as in/on, which can change the meaning), or None. Numbers never
+    change; longer words may differ by 2 letters or a third of their length; the HOMOPHONES pairs are a "fix"."""
+    if a == b:
+        return "same"
+    if any(c.isdigit() for c in a + b):
+        return None
+    if any(a in h and b in h for h in HOMOPHONES):
+        return "fix"
+    longest = max(len(a), len(b))
+    if longest <= 4:
+        return "short" if _lev(a, b) <= 1 else None
+    return "fix" if _lev(a, b) <= max(2, longest // 3) else None
+
+
+def _piece_at(piece, words, start):
+    """Where `piece` (a list of words) first matches `words` at or after `start`: (end, changed, short), or None.
+    Same words in the same order; each may be a spelling fix (_spelling_fix)."""
+    n = len(piece)
+    for k in range(start, len(words) - n + 1):
+        kinds = [_spelling_fix(a, b) for a, b in zip(piece, words[k:k + n])]
+        if None not in kinds:
+            return k + n, sum(x != "same" for x in kinds), kinds.count("short")
+    return None
+
+
+def _quote_match(quote, turns_n):
+    """"exact" if every piece of `quote` (split at ... and [..]) appears, in order, word for word in one owner turn;
+    "fixed" if it does once spelling fixes are allowed, with at most half the quote's words changed and at most a
+    quarter (at least one) short one-letter changes; else None."""
+    pieces = [_qnorm(p).split() for p in GAP_MARK.split(quote)]
     pieces = [p for p in pieces if p]
     if not pieces:
-        return True
+        return "exact"
+    total = sum(len(p) for p in pieces)
+    limit, short_limit = max(1, total // 2), max(1, total // 4)
+    best = None
     for t in turns_n:
-        pos = 0
+        words, pos, changed, short = t.split(), 0, 0, 0
         for p in pieces:
-            k = t.find(f" {p} ", pos)
-            if k < 0:
+            hit = _piece_at(p, words, pos)
+            if hit is None:
                 break
-            pos = k + len(p) + 1
+            pos, changed, short = hit[0], changed + hit[1], short + hit[2]
         else:
-            return True
-    return False
+            if not changed:
+                return "exact"
+            if changed <= limit and short <= short_limit:
+                best = "fixed"
+    return best
+
+
+def _verbatim(quote, turns_n):
+    """True if the quote is the owner's words, allowing spelling fixes (see _quote_match)."""
+    return _quote_match(quote, turns_n) is not None
 
 
 def quotes_are_verbatim(run):
-    """Every (said ...: ...) quote on a profile/ line that is new or changed this run appears word for word in an owner
-    turn (normalised: case, quote marks, dashes, punctuation; "..." and [insertions] allowed as gaps). Lines that
+    """Every (said ...: ...) quote on a profile/ line that is new or changed this run is an owner turn's words, in
+    order (normalised: case, quote marks, dashes, punctuation; "..." and [insertions] allowed as gaps; misspelled
+    words may be fixed, D59, but no word added, dropped, swapped or moved: _quote_match). Lines that
     also carry (draft) or (file ...) are left out (the words may come from the file), and so are lines unchanged
     from a resume scenario's starting profile. A quote the starting profile already holds (an earlier session's words
     moved to a new line) is left out too. Thresholds: [quotes] in checks.toml. Reports the share and examples."""
     turns_n = [f" {_qnorm(t)} " for t in run.person_turns]
     start_n = [f" {_qnorm(_original(run, n) or '')} " for n in FILES]
-    checked, bad, skipped, unchanged, carried = 0, [], 0, 0, 0
+    checked, bad, skipped, unchanged, carried, fixed = 0, [], 0, 0, 0, 0
     for f in FILES:
         text = _profile(run, f)
         if text is None:
@@ -336,14 +393,17 @@ def quotes_are_verbatim(run):
                     carried += 1
                     continue
                 checked += 1
-                if not _verbatim(q, turns_n):
+                kind = _quote_match(q, turns_n)
+                if kind is None:
                     bad.append(f'{f}: "{q[:70]}"')
+                elif kind == "fixed":
+                    fixed += 1
     if not checked:
         return Check.skip(f"no said-marks to check (unchanged lines {unchanged}, draft/file lines {skipped}, "
                           f"quotes from the starting profile {carried})")
     cfg = _config()["quotes"]
     share = 1 - len(bad) / checked
-    ev = (f"{checked - len(bad)} of {checked} quotes verbatim ({share:.0%}); left out: {unchanged} unchanged lines, "
+    ev = (f"{checked - len(bad)} of {checked} quotes are the owner's words ({share:.0%}; {fixed} with spelling fixed); left out: {unchanged} unchanged lines, "
           f"{skipped} draft/file lines, {carried} quotes from the starting profile; need {cfg['pass_share']:.0%} (partial {cfg['partial_share']:.0%}); "
           f"not found e.g. {bad[:5]}")
     if share >= cfg["pass_share"]:
@@ -381,6 +441,23 @@ def ideas_shape(run):
     if lo <= len(ideas) <= hi and len(cited) == len(ideas) and not_ai:
         return Check.passed(ev)
     return Check.partial(ev) if 1 <= len(ideas) <= max(hi, 5) else Check.failed(ev)
+
+
+def ideas_cite_current_way(run):
+    """D60: each numbered idea has a "Now:" line saying how the task is done today, with an evidence mark or GAP
+    (references/opportunities.md). Pass: all; partial: at least half."""
+    path, why = _path(run)
+    if path == "pause":
+        return Check.skip(f"pause path ({why}): no ideas expected")
+    ideas = _ideas(_profile(run, "ideas.md") or "")
+    if not ideas:
+        return Check.failed("no numbered ideas")
+    now = [re.search(r"^\s*-\s*Now:(.*)$", i, re.M | re.I) for i in ideas]
+    good = [m for m in now if m and (MARK.search(m.group(1)) or re.search(r"\bGAP\b", m.group(1)))]
+    ev = f"{len(good)} of {len(ideas)} ideas have a Now: line with a mark or GAP ({sum(1 for m in now if m)} have a Now: line)"
+    if len(good) == len(ideas):
+        return Check.passed(ev)
+    return Check.partial(ev) if len(good) * 2 >= len(ideas) else Check.failed(ev)
 
 
 def ideas_cover_money_and_customers(run):

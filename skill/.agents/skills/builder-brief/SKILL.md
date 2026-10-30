@@ -39,7 +39,7 @@ Some things a builder must know may be missing. Look for these, in this order, a
 4. One real, recent example of the problem ("Can you tell me about an invoice that went unpaid? What happened?").
 5. How they would know it worked.
 
-At most **5 questions**, one per message. Facts about how they work now go into `how-we-work.md`; limits go into `limits.md` with `(said: ...)`, exactly as they said them. Anything still missing stays a `GAP:` in the brief. If they offer a file to show you something, read only that file.
+At most **5 questions**, one per message. Facts about how they work now go into `how-we-work.md`; limits go into `limits.md` with `(said: ...)`, in their words (fix spelling only, never the wording, as in `profile/`). Anything still missing stays a `GAP:` in the brief. If they offer a file to show you something, read only that file.
 
 ### 3. Write the draft brief
 

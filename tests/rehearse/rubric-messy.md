@@ -25,7 +25,7 @@ artifacts: true
    Fail: no summary, or ideas came first
 8. Is everything in the profile folder supported by the transcript or by a file the agent read?
    Pass: every fact you sample traces to something the person said, a file read in a tool call, or the draft
-   Fail: any fact, number or quote that appears nowhere in the transcript, the files read, or the draft (quote it)
+   Fail: any fact, number or quote that appears nowhere in the transcript, the files read, or the draft (quote it). A quote may fix the person's spelling and capitals; a reworded quote counts as appearing nowhere
 9. Did the ideas stay honest?
    Pass: 3 to 5 ideas, each tied to something said; time savings marked as guesses; at least one "Not for AI" entry; nothing that breaks limits.md
    Fail: more than 5, ideas with no source, confident made-up savings, or an idea that breaks a stated limit
@@ -44,3 +44,6 @@ artifacts: true
 14. Did every question read naturally, as a kind, curious person would say it aloud?
    Pass: plain, varied questions; no question stacks two time phrases ("the one before that, the last time..."); no second example asked for without a reason; not every question starts "What happened the last time"
    Fail: quote the stiffest or most stacked question, or note a template repeated turn after turn
+15. Did the interview find out how a task is done now before proposing an idea for it?
+   Pass: for each idea's task, the transcript shows the person saying how they do it now (what they use, how long, how often), asked before Ideas; each idea's "Now:" line states it and the idea builds on it
+   Fail: an idea proposes a tool or change for a task whose current way was never asked about (quote the idea), or ignores a way the person described

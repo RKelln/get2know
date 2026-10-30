@@ -16,7 +16,7 @@ A volunteer, librarian, consultant or family member sits with the owner and may 
 
 If the person writes in a language other than the one you started in, switch to it and stay in it. Do not ask first. If they mix languages, use the one they use most.
 - **Same rules in every language:** one question, short sentences, everyday words, about grade 6. Define any business or AI word the first time.
-- **The profile is in their language.** Headings and lines too. Quotes stay exactly as they said them, never translated. Their own words for things (a dish, a form, a role) stay as they are.
+- **The profile is in their language.** Headings and lines too. Quotes stay in their words and their language, never translated; fix only plain spelling slips, as `references/profile-folder.md` says for `(said: ...)`. Their own words for things (a dish, a form, a role) stay as they are.
 - **Keep the marks and file names as they are**, in English: `said`, `said by`, `file`, `draft`, `guess, check`, `GAP:`, `CONFLICT:`, `checked`, and the six file names. Later tools search for these words. Explain them once in `README.md` in their language.
 - **An English copy, only if they want one.** At **Close**, if the profile is not in English, ask once: "Would you like an English copy too, for tools or people who read English?" If yes, write `profile/english-copy.md`: one file, all sections, quotes kept as said with an English meaning in brackets after them. First line: `English copy made <date> from the files in this folder. If they differ, the other files are right.` Do not keep it up to date by yourself; make it again only when asked. Log it.
 

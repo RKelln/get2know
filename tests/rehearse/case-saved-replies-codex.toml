@@ -1,0 +1,33 @@
+# Current-way case (DESIGN D60): the bike shop and cooperative Sam, but Sam already answers the common emails with
+# five saved replies (one with a stale price). Tests whether the interview finds how a task is done now before an
+# idea for it. Knowledge: knowledge/sam-saved-replies.md; judge: rubric-saved-replies.md question 14.
+# codex in every seat, as case-codex.toml (codex cannot limit writes to profile/; writes_only_inside_profile still checks).
+name = "get2know-bike-shop-saved-replies-codex"
+rubric = "rubric-saved-replies.md"
+answer_key = "fixture/answer-key.md"   # the judge only
+checks = "checks.py"
+runs_dir = "runs"
+
+[subject]
+adapter = "agent"
+seat = "codex"
+allowed_tools = ["Read", "Glob", "Grep", "Write(profile/**)", "Edit(profile/**)"]
+opening = "hi"   # each sim sets its own opening
+
+[scenario]
+folder = "fixture/shop"
+exclude = []   # the answer key sits in fixture/, outside this folder
+
+[variants]
+
+[sims]
+seat = "codex"
+dir = "sims-saved-replies"
+frame = "frames/sim.md"
+
+[limits]
+max_turns = 24
+
+[judge]
+seat = "codex"
+default = false

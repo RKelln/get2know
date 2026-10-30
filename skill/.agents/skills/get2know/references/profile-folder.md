@@ -19,7 +19,7 @@ Later AI tools read `README.md`, then `limits.md` first, then the rest.
 
 Every line of fact ends with a mark. A line with no mark is a mistake: fix it or delete it. A line may have two marks when two sources agree.
 
-- `(said: "...")` the owner said it. The mark holds only their exact words, copied from what they typed, short, in the language they used; cut with "..." if needed. Your summary can go in the line itself, never inside the mark.
+- `(said: "...")` the owner said it. The mark holds only their words, copied from what they typed, short, in the language they used; cut with "..." if needed. Fix spelling, obvious typos and capitals ("i dont no" → "I don't know"), but never add, drop, swap or move a word, and never change their grammar or way of talking ("we was slammed" stays). Leave names (people, shops, streets, products) as typed, and any word you are not sure is a typo. Your summary can go in the line itself, never inside the mark.
 - `(said by <role>: "...")` someone else said it: a helper, a staff member, a volunteer. Use a role ("helper", "part-time cook"), not a name, unless they want their name. See `references/people.md`. Never in `limits.md`.
 - `(file: name)` you read it in that file. Name the file.
 - `(draft)` copied from an earlier draft or notes. Keep the words as they are. Do not add a quote to it. If the person confirms it, add `(said: ...)`.

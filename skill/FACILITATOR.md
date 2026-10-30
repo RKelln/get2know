@@ -23,7 +23,7 @@ Starting from earlier notes or a draft profile? It will ask; they say yes and na
 
 1. It says hello, says what will happen, gives the privacy note, asks if there are notes to start from.
 2. With notes: it reads them, makes `profile/`, and names the 3 or 4 gaps that matter most.
-3. One short question at a time. It writes as it goes, quietly; it says so when it makes a new file or changes something said earlier. (To hear a line after every answer, set it in `SETTINGS.md`.)
+3. One short question at a time. It writes as it goes, quietly; it says so when it makes a new file or changes something said earlier. (To hear a line after every answer, set it in `SETTINGS.md`.) When the owner says how they handle a task they want help with, it asks how that works now before moving on.
 4. After about 8 answers: a short summary and "Is anything wrong or missing?"
 5. 3 to 5 ideas in `profile/ideas.md`, the top one said out loud, and "stop or keep going?"
 6. Close: where the folder is, one thing to try this week, what next.

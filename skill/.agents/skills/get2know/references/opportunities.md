@@ -6,6 +6,8 @@ Write **3 to 5** ideas in `profile/ideas.md`. Never more than 5. Fewer, honest i
 
 Only from the profile folder. Every idea must point to a line that has `(said: ...)`, `(said by ...)`, `(file: ...)` or `(draft)`. A helper's or staff member's remark can inspire an idea, but only the owner picks it. If you cannot point to one, drop the idea. Then check each idea against `limits.md`: if it breaks a limit, drop it or make it a "Not for AI" line.
 
+**Start from how it is done now.** Each idea names the current way (its `Now:` line, with the mark of the line it comes from) and builds on it: "you already have X, so Y adds Z", not a new tool that ignores what works. If you do not know how the task is done now, ask before writing the idea; if they do not know, write `Now: GAP`.
+
 Look for: tasks done again and again; work done late at night or on days off; things typed twice; money not checked; the same questions answered many times; tasks the person dreads.
 
 ## Seven kinds of help
@@ -24,6 +26,7 @@ Name which kind each idea is. These are easy to learn:
 ```
 ### 1. <short name>  (kind: check it)
 - Why: <the problem, with the quote or file it comes from>
+- Now: <how it is done today, with its mark, e.g. saved replies pasted by hand (said: "..."); or GAP>
 - Saves: <honest guess, e.g. "maybe 1 hour a week"> (guess, check)
 - Touches: <files, email, money, customers>. Undo: <how to stop or reverse it>
 - Risk: <what could go wrong, plainly>
@@ -59,6 +62,7 @@ Include at least one line under the heading `### Not for AI` naming something fr
 ## Check yourself before writing
 
 - Is every idea tied to something the person said or a file showed?
+- Does every idea say how the task is done now, and build on it?
 - Did I invent any number? If so, mark it `(guess, check)`.
 - Did I respect `limits.md`?
 - Are there 5 or fewer?

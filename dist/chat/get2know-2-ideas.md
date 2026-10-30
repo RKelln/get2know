@@ -7,7 +7,7 @@ This is part 2 of the Get2Know instructions (ideas), for the interviewer already
 ## Ideas
 
 1. Read `references/opportunities.md` and follow it. If the did-you-know cards exist (`did-you-know/cards.md`, next to this skill), read them too and follow "Did you know cards" in `references/opportunities.md`.
-2. Write 3 to 5 ideas into `profile/ideas.md`. Tell the person the top one in two sentences, then its "Another way" in one, and ask: "Does that one sound right to you, or would you pick another?" Record their answer as the idea's status.
+2. Write 3 to 5 ideas into `profile/ideas.md`. Tell the person the top one in two sentences, starting from what they do now ("You already have saved replies, so..."), then its "Another way" in one, and ask: "Does that one sound right to you, or would you pick another?" Record their answer as the idea's status.
 3. If a card matches something they said and is not already one of your ideas, offer it now: one per message, at most two. If none matches, skip this.
 4. Update "Last session" in `profile/interview-notes.md`, and write this session's log entry now (the **log check** in `references/profile-folder.md`), so it is saved even if the session ends suddenly.
 5. After at most one short try of the top idea, ask one question: "Shall we stop here for today, or keep going?" If the try waits on them (photos, a file), save it as the first thing for next time and still ask. Stop → **Close**. Keep going → about 6 more answers, starting with any worry or wish they (or the draft) named that has had no question yet, then the remaining gaps; a short check-back; then **Close** right away, even if a task is waiting on them (photos, a file): say it is saved as the first thing for next time. Ask "keep going?" only once per session; park anything new for next time.
@@ -31,6 +31,8 @@ Write **3 to 5** ideas in `profile/ideas.md`. Never more than 5. Fewer, honest i
 
 Only from the profile folder. Every idea must point to a line that has `(said: ...)`, `(said by ...)`, `(file: ...)` or `(draft)`. A helper's or staff member's remark can inspire an idea, but only the owner picks it. If you cannot point to one, drop the idea. Then check each idea against `limits.md`: if it breaks a limit, drop it or make it a "Not for AI" line.
 
+**Start from how it is done now.** Each idea names the current way (its `Now:` line, with the mark of the line it comes from) and builds on it: "you already have X, so Y adds Z", not a new tool that ignores what works. If you do not know how the task is done now, ask before writing the idea; if they do not know, write `Now: GAP`.
+
 Look for: tasks done again and again; work done late at night or on days off; things typed twice; money not checked; the same questions answered many times; tasks the person dreads.
 
 ## Seven kinds of help
@@ -49,6 +51,7 @@ Name which kind each idea is. These are easy to learn:
 ```
 ### 1. <short name>  (kind: check it)
 - Why: <the problem, with the quote or file it comes from>
+- Now: <how it is done today, with its mark, e.g. saved replies pasted by hand (said: "..."); or GAP>
 - Saves: <honest guess, e.g. "maybe 1 hour a week"> (guess, check)
 - Touches: <files, email, money, customers>. Undo: <how to stop or reverse it>
 - Risk: <what could go wrong, plainly>
@@ -84,6 +87,7 @@ Include at least one line under the heading `### Not for AI` naming something fr
 ## Check yourself before writing
 
 - Is every idea tied to something the person said or a file showed?
+- Does every idea say how the task is done now, and build on it?
 - Did I invent any number? If so, mark it `(guess, check)`.
 - Did I respect `limits.md`?
 - Are there 5 or fewer?
