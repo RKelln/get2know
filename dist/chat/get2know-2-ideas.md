@@ -1,4 +1,4 @@
-Get2Know part 2 of 3: ideas (version 0.2.1). Paste this only when the interviewer asks.
+Get2Know part 2 of 3: ideas (version 0.2.2). Paste this only when the interviewer asks.
 
 This is part 2 of the Get2Know instructions (ideas), for the interviewer already running in this chat. It adds to part 1; part 1's rules and "How this chat works" still hold. Carry on where you were.
 

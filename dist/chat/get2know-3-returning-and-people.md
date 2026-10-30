@@ -1,4 +1,4 @@
-Get2Know part 3 of 3: returning owners and other people (version 0.2.1). Paste this only when the interviewer asks.
+Get2Know part 3 of 3: returning owners and other people (version 0.2.2). Paste this only when the interviewer asks.
 
 This is part 3 of the Get2Know instructions (returning owners and other people), for the interviewer already running in this chat. It adds to part 1; part 1's rules and "How this chat works" still hold. Carry on where you were.
 
