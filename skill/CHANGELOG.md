@@ -2,9 +2,10 @@
 
 Newest first. Your version number is in the file `VERSION`. To update, see `UPDATE.md`.
 
-## Not released yet
+## 0.2.3 (2026-10-30)
 
-- **Your records first.** When talk turns to something your records would show (money, customers, jobs, bookings), its first question is whether you have them handy, and after you say yes it reads them and asks about what it sees, instead of asking you for facts they already hold. If you say no, it asks its usual questions and does not offer again.
+- **Ideas say what they are.** Each idea in `ideas.md` now starts with the idea itself in a sentence or two, then another way to do it, then why, how you do it now, and the rest. The "Simplest version" line is gone. Where more could be taken off you later, a "Where it could lead" line says where the idea is heading, in one sentence, within your limits.
+- **Your records first.** When talk turns to something your records would show (money, prices, customers, jobs, bookings), its first question is whether you have them handy, and after you say yes it reads them and asks about what it sees, instead of asking you for facts they already hold. If you say no, it asks its usual questions and does not offer again.
 
 ## 0.2.2 (2026-10-30)
 

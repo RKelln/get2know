@@ -35,7 +35,7 @@ Read first: ../README.md and ../limits.md. limits.md wins over this brief.
 ## The simplest version
 <3-5 lines: the smallest thing that would help this week. By hand, on a copy, once a week, owner checks every result.>
 
-Later, maybe: <bigger ideas the owner mentioned; not part of this build>
+Later, maybe: <bigger ideas the owner mentioned, and the idea's "Where it could lead" line if it has one; not part of this build>
 
 ## Options, open first
 <From references/options.md: up to 3 options and "build a small one". Each with its tier, licence, what it needs, who keeps it working, and how it was checked.>

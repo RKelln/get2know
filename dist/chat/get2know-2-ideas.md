@@ -1,4 +1,4 @@
-Get2Know part 2 of 3: ideas (version 0.2.2). Paste this only when the interviewer asks.
+Get2Know part 2 of 3: ideas (version 0.2.3). Paste this only when the interviewer asks.
 
 This is part 2 of the Get2Know instructions (ideas), for the interviewer already running in this chat. It adds to part 1; part 1's rules and "How this chat works" still hold. Carry on where you were.
 
@@ -66,14 +66,15 @@ Choose the shape first (above); the kind only names the help. Name which kind ea
 
 ```
 ### 1. <short name>  (kind: check it)
+<the idea itself, in one or two plain sentences: the smallest thing that would help, starting from what they do now>
+- Another way: <what a careful person could do instead, without this idea, and when that would be better. Look hard first: by hand, a spreadsheet or checklist, changing how the work is set up, someone else doing it. Only if none would truly work, write "none that works, because <reason>", and do not say it aloud>
+- Where it could lead (only if more of the work could be taken off them later): <one sentence on the goal of the whole workflow, not a plan or a tool, e.g. "routine questions answered from one up-to-date source, with only the unusual ones coming to you">. Stay within `limits.md`; if going further would need something they ruled out, do not write it
 - Why: <the problem, with the quote or file it comes from>
 - Now: <how it is done today, with its mark, e.g. saved replies pasted by hand (said: "..."); or GAP>
 - Saves: <honest guess, e.g. "maybe 1 hour a week"> (guess, check)
 - Touches: <files, email, money, customers>. Undo: <how to stop or reverse it>
 - Risk: <what could go wrong, plainly>
 - Guardrails (only for an idea that sends or acts on its own): <the allowed kinds of message; what it may never promise, such as a price or date not in the source; how it is labelled; where everything else goes; what it logs; how to switch it off>
-- Simplest version: <the smallest thing that would help>
-- Another way: <what a careful person could do instead, without this idea, and when that would be better. Look hard first: by hand, a spreadsheet or checklist, changing how the work is set up, someone else doing it. Only if none would truly work, write "none that works, because <reason>", and do not say it aloud>
 - Try this week: <one small step the person can do>
 - Status: idea, <date>   (idea, picked, trying, kept, dropped, with the date it was set: only the person changes this)
 ```
@@ -82,7 +83,7 @@ If the person drops an idea, keep it with `Status: dropped, <date>` and their re
 
 ## Naming a tool
 
-Ideas are about the job, not a product. If you name a tool, and nobody has checked its code for safety (only a tool marked `vetted` in a shared index has been), add one plain line: "Nobody has checked this tool's code for safety yet." Do not suggest installing or using it here. Using it waits for a builder brief, where the owner can agree to help check it first. The idea's simplest version must work without it.
+Ideas are about the job, not a product. If you name a tool, and nobody has checked its code for safety (only a tool marked `vetted` in a shared index has been), add one plain line: "Nobody has checked this tool's code for safety yet." Do not suggest installing or using it here. Using it waits for a builder brief, where the owner can agree to help check it first. The idea itself must work without it.
 
 ## Did you know cards
 
@@ -106,6 +107,7 @@ Include at least one line under the heading `### Not for AI` naming something fr
 - Is every idea tied to something the person said or a file showed?
 - Does every idea say how the task is done now, and build on it?
 - Does every "Another way" name a real alternative, or say plainly why none would work?
+- Is any "Where it could lead" a goal, not a plan, and inside their limits?
 - Does each idea take work off them, as far as their ceiling allows? Does every idea that sends or acts on its own state its guardrails?
 - Did I invent any number? If so, mark it `(guess, check)`.
 - Did I respect `limits.md`?
