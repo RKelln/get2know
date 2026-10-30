@@ -2,6 +2,10 @@
 
 Newest first. Your version number is in the file `VERSION`. To update, see `UPDATE.md`.
 
+## Not released yet
+
+- **Short on time, still one idea.** If you confirm the summary and have to go right away, it still saves one idea and tells it to you in one sentence as you leave.
+
 ## 0.2.0 (2026-10-30)
 
 - **Quieter while it writes.** It no longer says "I saved that in..." after every answer. It still says so when it makes a new file or changes something you said earlier, and it reads everything back to you after about 8 answers. To hear a line after every answer again, set **Say what was written after each answer: yes** in `SETTINGS.md`. It also stops thanking you after every answer.

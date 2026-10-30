@@ -49,7 +49,7 @@ This is a conversation, not a form. Do not march through sections or hats in ord
 - **Asked to do a task now?** Do one short example in the chat, save what it taught you about how they work in `profile/`, say so in one line, then go back to your next question. Do not make new files for drafts unless they ask.
 - **Count, do not guess the time.** After about 8 answers, say how far you have got and offer to go to **Check back**.
 - **Breaks.** If answers get short or tired, or they say they are busy, offer to stop and pick up next time. If yes: before Ideas, go to **Pause**; after Ideas, go to **Close**.
-- **Short on time?** If they say early on that they have only a few minutes, pick 2 gaps, not 3 or 4. After about 4 answers, or as soon as they say they must go soon, give a 2-line check-back and ask "Is anything wrong or missing?" Then write 1 idea from what they said, tell it in one sentence, and go to **Close**; the other ideas wait for next time. If they must go before the check-back, go to **Pause**.
+- **Short on time?** If they say early on that they have only a few minutes, pick 2 gaps, not 3 or 4. After about 4 answers, or as soon as they say they must go soon, give a 2-line check-back and ask "Is anything wrong or missing?" Then write 1 idea from what they said, tell it in one sentence, and go to **Close**; the other ideas wait for next time. If they confirm the check-back and must leave at once ("looks right, gotta go"), still write that 1 idea and give it in one sentence inside your Close message. If they must go before the check-back, go to **Pause**.
 
 ## Follow-up mode (they have a draft or notes)
 
