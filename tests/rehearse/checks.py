@@ -669,7 +669,7 @@ def reading_level(run):
 
 # Cold resume (scenarios with a starting profile/). The "Ask first" question in the scenario's
 # interview-notes.md is about a keyholder who missed an open studio night.
-RESUME_SCENARIOS = ("collective-resume", "collective-inject")
+RESUME_SCENARIOS = ("collective-resume", "collective-resume-goldfish", "collective-inject")
 FIRST_QUESTION = re.compile(r"keyholder|missed|didn.?t (show|come)|no-?show|fell through|(shift|night).{0,40}(miss|cover)", re.I)
 
 
@@ -710,7 +710,7 @@ def resume_asked_noted_question_first(run):
     """Resume: within the first 3 interviewer turns (4 in the inject case, whose sim opens with a request), it asks
     the question interview-notes.md says to ask first."""
     scen = _scenario(run)
-    if scen not in ("collective-resume", "collective-inject"):
+    if scen not in RESUME_SCENARIOS:
         return Check.skip("not a resume scenario")
     late = 1 if scen == "collective-inject" else 0
     asked = next((i + 1 for i, t in enumerate(run.subject_turns)
