@@ -1,0 +1,107 @@
+Invoice,Date,Customer,Description,Subtotal,HST,Total,Terms,Due,Status
+INV-1001,2026-07-02,Leila Haddad,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-07-02,Paid
+INV-1002,2026-07-03,Tomas Novak,Cable replacement; Parts,34.00,4.42,38.42,Due on pickup,2026-07-03,Paid
+INV-1003,2026-07-03,Ivan Horvat,Drivetrain clean,55.00,7.15,62.15,Due on pickup,2026-07-03,Paid
+INV-1004,2026-07-03,Marcus Webb,Brake pad install; Parts,73.00,9.49,82.49,Due on pickup,2026-07-03,Paid
+INV-1005,2026-07-04,Ben Kowalski,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-07-04,Paid
+INV-1006,2026-07-04,Nadia Persaud,Wheel true,35.00,4.55,39.55,Due on pickup,2026-07-04,Paid
+INV-1007,2026-07-06,Harbourline Courier Co.,"Fleet service, 6 bikes (basic tune-up + chain lube)",582.00,75.66,657.66,Net 30,2026-08-05,Paid
+INV-1008,2026-07-07,Ivan Horvat,Full tune-up,159.00,20.67,179.67,Due on pickup,2026-07-07,Paid
+INV-1009,2026-07-07,Omar Siddiqui,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-07-07,Paid
+INV-1010,2026-07-09,Ben Kowalski,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-07-09,Paid
+INV-1011,2026-07-09,Priya Nair,Chain replacement; Parts,68.00,8.84,76.84,Due on pickup,2026-07-09,Paid
+INV-1012,2026-07-10,Daniel Okafor,Full tune-up,159.00,20.67,179.67,Due on pickup,2026-07-10,Paid
+INV-1013,2026-07-10,Leila Haddad,Wheel true,35.00,4.55,39.55,Due on pickup,2026-07-10,Paid
+INV-1014,2026-07-11,Grace Tran,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-07-11,Paid
+INV-1015,2026-07-11,Chris Dube,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-07-11,Paid
+INV-1016,2026-07-11,Aiko Tanaka,Full tune-up,159.00,20.67,179.67,Due on pickup,2026-07-11,Paid
+INV-1017,2026-07-14,Nadia Persaud,Drivetrain clean,55.00,7.15,62.15,Due on pickup,2026-07-14,Paid
+INV-1018,2026-07-15,Daniel Okafor,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-07-15,Paid
+INV-1019,2026-07-16,Mei Lin Chow,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-07-16,Paid
+INV-1020,2026-07-17,Chris Dube,Drivetrain clean,55.00,7.15,62.15,Due on pickup,2026-07-17,Paid
+INV-1021,2026-07-17,Tomas Novak,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-07-17,Paid
+INV-1022,2026-07-18,Ivan Horvat,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-07-18,Paid
+INV-1023,2026-07-18,Sofia Petrov,Drivetrain clean,55.00,7.15,62.15,Due on pickup,2026-07-18,Paid
+INV-1024,2026-07-21,Marcus Webb,Full tune-up,159.00,20.67,179.67,Due on pickup,2026-07-21,Paid
+INV-1025,2026-07-21,Ben Kowalski,Brake pad install; Parts,73.00,9.49,82.49,Due on pickup,2026-07-21,Paid
+INV-1026,2026-07-22,Ana Rossi,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-07-22,Paid
+INV-1027,2026-07-22,Fatima Rahimi,Brake pad install; Parts,73.00,9.49,82.49,Due on pickup,2026-07-22,Paid
+INV-1028,2026-07-24,Tomas Novak,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-07-24,Paid
+INV-1029,2026-07-24,Marcus Webb,Chain replacement; Parts,68.00,8.84,76.84,Due on pickup,2026-07-24,Paid
+INV-1030,2026-07-24,Ben Kowalski,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-07-24,Paid
+INV-1031,2026-07-25,Tomas Novak,Cable replacement; Parts,34.00,4.42,38.42,Due on pickup,2026-07-25,Paid
+INV-1032,2026-07-28,Ben Kowalski,Chain replacement; Parts,68.00,8.84,76.84,Due on pickup,2026-07-28,Paid
+INV-1033,2026-07-28,Chris Dube,Chain replacement; Parts,68.00,8.84,76.84,Due on pickup,2026-07-28,Paid
+INV-1034,2026-07-28,Sofia Petrov,Full tune-up,159.00,20.67,179.67,Due on pickup,2026-07-28,Paid
+INV-1035,2026-07-29,Chris Dube,Kids' bike tune-up,59.00,7.67,66.67,Due on pickup,2026-07-29,Paid
+INV-1036,2026-07-29,Leila Haddad,Wheel true,35.00,4.55,39.55,Due on pickup,2026-07-29,Paid
+INV-1037,2026-07-29,Sofia Petrov,Chain replacement; Parts,68.00,8.84,76.84,Due on pickup,2026-07-29,Paid
+INV-1038,2026-07-30,Hannah Berg,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-07-30,Paid
+INV-1039,2026-07-30,Fatima Rahimi,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-07-30,Paid
+INV-1040,2026-07-31,Aiko Tanaka,Drivetrain clean,55.00,7.15,62.15,Due on pickup,2026-07-31,Paid
+INV-1041,2026-07-31,Ben Kowalski,Wheel true,35.00,4.55,39.55,Due on pickup,2026-07-31,Paid
+INV-1042,2026-07-31,Priya Nair,Overhaul,289.00,37.57,326.57,Due on pickup,2026-07-31,Paid
+INV-1043,2026-08-01,Aiko Tanaka,Chain replacement; Parts,68.00,8.84,76.84,Due on pickup,2026-08-01,Paid
+INV-1044,2026-08-03,Harbourline Courier Co.,"Fleet service, 7 bikes (basic tune-up + chain lube)",679.00,88.27,767.27,Net 30,2026-09-02,Paid
+INV-1045,2026-08-04,Ben Kowalski,Wheel true,35.00,4.55,39.55,Due on pickup,2026-08-04,Paid
+INV-1046,2026-08-04,Chris Dube,Wheel true,35.00,4.55,39.55,Due on pickup,2026-08-04,Paid
+INV-1047,2026-08-05,Omar Siddiqui,Drivetrain clean,55.00,7.15,62.15,Due on pickup,2026-08-05,Paid
+INV-1048,2026-08-05,Tomas Novak,Full tune-up,159.00,20.67,179.67,Due on pickup,2026-08-05,Paid
+INV-1049,2026-08-05,Leila Haddad,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-08-05,Paid
+INV-1050,2026-08-06,Kofi Mensah,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-08-06,Paid
+INV-1051,2026-08-07,Ben Kowalski,Cable replacement; Parts,34.00,4.42,38.42,Due on pickup,2026-08-07,Paid
+INV-1052,2026-08-07,Hannah Berg,Kids' bike tune-up,59.00,7.67,66.67,Due on pickup,2026-08-07,Paid
+INV-1053,2026-08-08,Priya Nair,Overhaul,289.00,37.57,326.57,Due on pickup,2026-08-08,Paid
+INV-1054,2026-08-08,Marcus Webb,Wheel true,35.00,4.55,39.55,Due on pickup,2026-08-08,Paid
+INV-1055,2026-08-11,Ana Rossi,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-08-11,Paid
+INV-1056,2026-08-14,Mei Lin Chow,Brake pad install; Parts,73.00,9.49,82.49,Due on pickup,2026-08-14,Paid
+INV-1057,2026-08-14,Priya Nair,Brake pad install; Parts,73.00,9.49,82.49,Due on pickup,2026-08-14,Paid
+INV-1058,2026-08-15,Jamal Carter,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-08-15,Paid
+INV-1059,2026-08-18,Daniel Okafor,Kids' bike tune-up,59.00,7.67,66.67,Due on pickup,2026-08-18,Paid
+INV-1060,2026-08-18,Grace Tran,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-08-18,Paid
+INV-1061,2026-08-19,Ben Kowalski,Brake pad install; Parts,73.00,9.49,82.49,Due on pickup,2026-08-19,Paid
+INV-1062,2026-08-19,Fatima Rahimi,Chain replacement; Parts,68.00,8.84,76.84,Due on pickup,2026-08-19,Paid
+INV-1063,2026-08-19,Ben Kowalski,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-08-19,Paid
+INV-1064,2026-08-20,Ivan Horvat,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-08-20,Paid
+INV-1065,2026-08-20,Leila Haddad,Drivetrain clean,55.00,7.15,62.15,Due on pickup,2026-08-20,Paid
+INV-1066,2026-08-21,Kofi Mensah,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-08-21,Paid
+INV-1067,2026-08-22,Nadia Persaud,Wheel true,35.00,4.55,39.55,Due on pickup,2026-08-22,Paid
+INV-1068,2026-08-25,Sofia Petrov,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-08-25,Paid
+INV-1069,2026-08-26,Priya Nair,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-08-26,Paid
+INV-1070,2026-08-27,Tomas Novak,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-08-27,Paid
+INV-1071,2026-08-27,Mei Lin Chow,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-08-27,Paid
+INV-1072,2026-08-29,Ana Rossi,Brake pad install; Parts,73.00,9.49,82.49,Due on pickup,2026-08-29,Paid
+INV-1073,2026-09-01,Harbourline Courier Co.,"Fleet service, 8 bikes (basic tune-up + chain lube)",776.00,100.88,876.88,Net 30,2026-10-01,Open
+INV-1074,2026-09-02,Omar Siddiqui,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-09-02,Paid
+INV-1075,2026-09-02,Tomas Novak,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-09-02,Paid
+INV-1076,2026-09-03,Nadia Persaud,Kids' bike tune-up,59.00,7.67,66.67,Due on pickup,2026-09-03,Paid
+INV-1077,2026-09-03,Kofi Mensah,Brake pad install; Parts,73.00,9.49,82.49,Due on pickup,2026-09-03,Paid
+INV-1078,2026-09-04,Priya Nair,Brake pad install; Parts,73.00,9.49,82.49,Due on pickup,2026-09-04,Paid
+INV-1079,2026-09-05,Aiko Tanaka,Brake pad install; Parts,73.00,9.49,82.49,Due on pickup,2026-09-05,Paid
+INV-1080,2026-09-05,Mei Lin Chow,Brake pad install; Parts,73.00,9.49,82.49,Due on pickup,2026-09-05,Paid
+INV-1081,2026-09-08,Priya Nair,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-09-08,Paid
+INV-1082,2026-09-08,Kofi Mensah,Brake pad install; Parts,73.00,9.49,82.49,Due on pickup,2026-09-08,Paid
+INV-1083,2026-09-10,Jamal Carter,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-09-10,Paid
+INV-1084,2026-09-10,Priya Nair,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-09-10,Paid
+INV-1085,2026-09-10,Ana Rossi,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-09-10,Paid
+INV-1086,2026-09-11,Priya Nair,Brake pad install; Parts,73.00,9.49,82.49,Due on pickup,2026-09-11,Paid
+INV-1087,2026-09-12,Fatima Rahimi,Drivetrain clean,55.00,7.15,62.15,Due on pickup,2026-09-12,Paid
+INV-1088,2026-09-12,Kofi Mensah,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-09-12,Paid
+INV-1089,2026-09-15,Chris Dube,Full tune-up,159.00,20.67,179.67,Due on pickup,2026-09-15,Paid
+INV-1090,2026-09-15,Mei Lin Chow,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-09-15,Overdue 15 days
+INV-1091,2026-09-16,Daniel Okafor,Full tune-up,159.00,20.67,179.67,Due on pickup,2026-09-16,Paid
+INV-1092,2026-09-16,Aiko Tanaka,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-09-16,Paid
+INV-1093,2026-09-17,Marcus Webb,Kids' bike tune-up,59.00,7.67,66.67,Due on pickup,2026-09-17,Paid
+INV-1094,2026-09-17,Kofi Mensah,Full tune-up,159.00,20.67,179.67,Due on pickup,2026-09-17,Overdue 13 days
+INV-1095,2026-09-18,Aiko Tanaka,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-09-18,Paid
+INV-1096,2026-09-22,Hannah Berg,Wheel true,35.00,4.55,39.55,Due on pickup,2026-09-22,Paid
+INV-1097,2026-09-22,Priya Nair,Cable replacement; Parts,34.00,4.42,38.42,Due on pickup,2026-09-22,Paid
+INV-1098,2026-09-23,Mei Lin Chow,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-09-23,Paid
+INV-1099,2026-09-24,Marcus Webb,Brake pad install; Parts,73.00,9.49,82.49,Due on pickup,2026-09-24,Paid
+INV-1100,2026-09-24,Kofi Mensah,Flat repair; Parts,37.00,4.81,41.81,Due on pickup,2026-09-24,Paid
+INV-1101,2026-09-26,Daniel Okafor,Cable replacement; Parts,34.00,4.42,38.42,Due on pickup,2026-09-26,Paid
+INV-1102,2026-09-29,Chris Dube,Chain replacement; Parts,68.00,8.84,76.84,Due on pickup,2026-09-29,Paid
+INV-1103,2026-09-29,Ivan Horvat,Basic tune-up,89.00,11.57,100.57,Due on pickup,2026-09-29,Paid
+INV-1104,2026-09-30,Nadia Persaud,Full tune-up,159.00,20.67,179.67,Due on pickup,2026-09-30,Paid
+INV-1105,2026-09-30,Nadia Persaud,Chain replacement; Parts,68.00,8.84,76.84,Due on pickup,2026-09-30,Paid
+INV-1106,2026-09-30,Hannah Berg,Full tune-up,159.00,20.67,179.67,Due on pickup,2026-09-30,Paid

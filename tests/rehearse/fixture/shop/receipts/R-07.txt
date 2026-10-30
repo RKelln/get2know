@@ -1,0 +1,11 @@
+SHOP TOOLS DIRECT
+Receipt R-07
+Date: 2026-08-19
+--------------------------------
+Torque wrench 5-25 Nm       156.00
+--------------------------------
+Subtotal                    156.00
+HST 13%                      20.28
+TOTAL                       176.28
+
+Paid: debit

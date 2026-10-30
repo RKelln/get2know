@@ -1,0 +1,12 @@
+CITY HARDWARE
+Receipt R-12
+Date: 2026-09-12
+--------------------------------
+Hex key set                  18.74
+Work gloves                   5.00
+--------------------------------
+Subtotal                     23.74
+HST 13%                       3.09
+TOTAL                        26.83
+
+Paid: cash

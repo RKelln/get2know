@@ -1,0 +1,7 @@
+# Run folders are large and local; keep only the hand-written assessments.
+runs/*/*
+!runs/*/assessment.md
+# Made by build.py: copies of the skill.
+variants/skill-*/
+runs-mock/
+fixture/__pycache__/

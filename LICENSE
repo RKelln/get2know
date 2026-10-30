@@ -1,0 +1,44 @@
+MIT License (code)
+
+Copyright (c) 2026 Ryan Kelln
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+Prompts, skill text and documentation (everything under skill/ and docs/, and
+the Markdown files at the top of this repository) are licensed under the
+Creative Commons Attribution 4.0 International licence (CC BY 4.0):
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Except: scripts are code and fall under the MIT licence above, wherever they
+sit. That includes every Python file under skill/ (skill/**/*.py) and
+tools/update.py, which ships in the skill zip as update.py.
+skill/LICENSE.md repeats the MIT text so the zip carries it.
+
+The test material under tests/rehearse/ that is not code (the made-up bike shop in
+tests/rehearse/fixture/, the print collective, sims, knowledge pages, rubrics and
+assessments) is CC BY 4.0 too; the Python files there are MIT.
+
+Records in the capability commons, when it exists, are dedicated to the public
+domain under CC0 1.0: https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+Parts adapted from others keep their own licences and credit:
+- Ideas from mattpocock/skills (MIT), described in docs/prior-art-research.md.
+- LLMREI findings and data (CC BY 4.0, Korn, Gorsch and Vogelsang 2025), described in docs/research/llmrei.md.

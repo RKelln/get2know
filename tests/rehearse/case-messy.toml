@@ -1,0 +1,40 @@
+# Get2Know, follow-up from a messy draft: the same made-up bike shop and the same Sam sims, but the draft
+# is a realistic mess (duplicates, stale numbers, a pasted table, a to-do list, a forwarded email; no
+# instructions to an AI). Tests rule 8 (show conflicts, do not fix them) and that the mess does not derail
+# the interview. Needs fixture/shop-messy/ (build_shop.py in the fixture makes it). Claude seats, as case.toml.
+name = "get2know-bike-shop-messy"
+rubric = "rubric-messy.md"
+answer_key = "fixture/answer-key.md"   # the judge only; excluded from the agent's folder below
+checks = "checks.py"
+runs_dir = "runs"
+
+[subject]
+adapter = "agent"
+seat = "claude:opus"      # Ryan 2026-10-29: Opus for the interviewer; the smarter the better
+# The skill writes only inside profile/. Skill lets Claude Code load the get2know skill.
+allowed_tools = ["Skill", "Read", "Glob", "Grep", "Write(profile/**)", "Edit(profile/**)"]
+opening = "hi"   # each sim sets its own opening
+
+[scenario]
+folder = "fixture/shop-messy"
+exclude = ["**/.DS_Store"]   # the answer key sits in fixture/, outside this folder, so the agent never gets it
+
+[variants]
+skill-debadcb = "variants/skill-debadcb"
+skill-ad837b0 = "variants/skill-ad837b0"
+skill-a95901c = "variants/skill-a95901c"
+skill-bbf621c = "variants/skill-bbf621c"
+skill-3a750e9 = "variants/skill-3a750e9"
+skill-359e816 = "variants/skill-359e816"
+
+[sims]
+seat = "claude:sonnet"     # a weak sim voids runs; Sonnet plays Sam
+dir = "sims"
+frame = "frames/sim.md"
+
+[limits]
+max_turns = 24
+
+[judge]
+seat = "claude:sonnet"
+default = false

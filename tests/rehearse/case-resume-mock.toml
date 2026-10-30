@@ -1,0 +1,33 @@
+# Free plumbing test for the resume checks: a scripted agent that resumes well. Tests the checks, not any model.
+name = "get2know-collective-resume-mock"
+checks = "checks.py"
+runs_dir = "runs-mock"
+
+[subject]
+adapter = "agent"
+seat = "mock"
+allowed_tools = ["Read", "Write(profile/**)", "Edit(profile/**)"]
+opening = "hi"
+
+[scenario]
+folder = "scenarios/collective-resume"
+exclude = []
+
+[variants]
+baseline = ""
+
+[sims]
+seat = "mock"
+dir = "sims-resume"
+frame = "frames/sim.md"
+
+[limits]
+max_turns = 3
+
+[mock]
+subject = [
+  { text = "Hi Dee. Last time we covered the collective, the people and the grant. What happened the last time a keyholder missed an open studio night?", tool_calls = [{ name = "Read", arg = "./profile/interview-notes.md" }] },
+  { text = "Thanks, got it. I wrote that in how-we-work.md, under A typical week. Shall we stop here for today?", write = { "profile/how-we-work.md" = "# Lantern Print Collective: how we work\n## Summary\n- A non-profit print studio for screen printing and risograph, in one rented basement room (said: \"a shared print studio in a basement\")\n- About 40 members who pay monthly, some on a sliding scale (said: \"about 40 members, $25 a month or pay what you can\")\n\n## People\n- Dee is the coordinator and the only paid person: paid for 15 hours a week (said: \"paid for 15, really more like 25\")\n- A volunteer board of five; the treasurer does the books every three months (said: \"the treasurer does the books every quarter\")\n- About 10 regular volunteers; each open studio night needs one keyholder (said: \"someone has to unlock and lock up\")\n\n## A typical week\n- Open studio Tuesday and Thursday, 6 to 9 pm, members only (said: \"Tuesday and Thursday nights\")\n- Saturday intro workshops, 1 to 4 pm, 8 seats (said: \"Saturday workshops, eight seats\") (file: studio-calendar.md)\n- Monday is admin day at home: email, the dues sheet, teachers, Instagram (said: \"Monday is my admin day\")\n- Last Thursday the keyholder did not come; Dee went in at 5:40 and ran the night (said 2026-10-29: \"nobody else could come\")\n\n## Tools and systems\n- Volunteer shifts are sorted out in a group chat (said: \"it's all in the group chat\")\n- GAP: where payments and sign-ups are tracked\n\n## Money\n- A city arts grant of $18,000 a year pays most of the rent and Dee's pay (said: \"the city grant, eighteen thousand\")\n- The grant's final report is due every March and needs attendance counts (said: \"every March I have to count everybody\")\n- GAP: how dues come in and how Dee knows who has paid\n\n## Customers\n- Members, workshop students, and people who write in to the shared inbox (said: \"members, students, and the inbox\")\n- GAP: what people ask most often\n\n## What they want help with\n- Fewer late nights on email (said: \"I don't want to be answering email at midnight\")\n- GAP: what Dee would hand off first\n" } },
+  { text = "Everything is saved in the profile folder. To carry on, start this again in the same folder.", write = { "profile/log.md" = "# Log\n\n## 2026-10-15: first interview\n- how-we-work.md: summary, people, the week, the grant; GAPs for shifts, dues, inbox, hand-offs\n- limits.md: why we do this; sliding-scale decisions stay human; grant rule; board approves spends over $500\n- ideas.md: none yet (paused before ideas)\n\n## 2026-10-29: resumed\n- how-we-work.md: the missed keyholder shift\n- limits.md: no changes\n- ideas.md: none yet\n", "profile/interview-notes.md" = "# Interview notes\n## Next questions\n- how-we-work.md, A typical week: keyholder shifts\n- how-we-work.md, Money: how dues come in\n- how-we-work.md, Customers: what people ask most often\n- how-we-work.md, What they want help with: what to hand off first\n\n## Threads to come back to\n- Dues come in late (said: \"people forget to pay and I hate chasing them\")\n- The grant report takes a long time (said: \"March is a nightmare\")\n\n## Last session\n- Covered: what the collective does, the people, the week, the grant.\n- Open: keyholder shifts, dues, the inbox, what to hand off. Stopped before ideas; Dee had to leave.\n- Ask first: How do dues come in, and how do you know who has paid?\n" } },
+]
+sim = ["last thursday marco didn't come, I went in", "yes let's stop", "DONE"]

@@ -1,0 +1,13 @@
+NORTHGATE CYCLE SUPPLY
+Receipt R-05
+Date: 2026-09-10
+--------------------------------
+Tubes x40                   216.00
+Brake pads x20              140.00
+Tires x10                   100.00
+--------------------------------
+Subtotal                    456.00
+HST 13%                      59.28
+TOTAL                       515.28
+
+Paid: debit

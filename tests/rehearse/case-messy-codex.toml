@@ -1,0 +1,38 @@
+# Get2Know, follow-up from a messy draft (see case-messy.toml), with codex in every seat (Ryan's ChatGPT
+# login). codex cannot limit writes to profile/, only to the work folder; writes_only_inside_profile and
+# draft_untouched still check. See case-codex.toml.
+name = "get2know-bike-shop-messy-codex"
+rubric = "rubric-messy.md"
+answer_key = "fixture/answer-key.md"   # the judge only
+checks = "checks.py"
+runs_dir = "runs"
+
+[subject]
+adapter = "agent"
+seat = "codex"
+allowed_tools = ["Read", "Glob", "Grep", "Write(profile/**)", "Edit(profile/**)"]
+opening = "hi"   # each sim sets its own opening
+
+[scenario]
+folder = "fixture/shop-messy"
+exclude = []   # the answer key sits in fixture/, outside this folder
+
+[variants]
+skill-debadcb = "variants/skill-debadcb"
+skill-ad837b0 = "variants/skill-ad837b0"
+skill-a95901c = "variants/skill-a95901c"
+skill-bbf621c = "variants/skill-bbf621c"
+skill-3a750e9 = "variants/skill-3a750e9"
+skill-359e816 = "variants/skill-359e816"
+
+[sims]
+seat = "codex"
+dir = "sims"
+frame = "frames/sim.md"
+
+[limits]
+max_turns = 24
+
+[judge]
+seat = "codex"
+default = false

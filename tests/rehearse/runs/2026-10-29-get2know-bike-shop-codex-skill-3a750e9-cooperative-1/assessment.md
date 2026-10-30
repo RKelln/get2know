@@ -1,0 +1,14 @@
+# Assessment: bike-shop, codex × codex, skill-3a750e9 × cooperative, run 1
+
+Assessed 2026-10-29 by a review agent. One run: an anecdote. Seats: subject, sim and judge all `codex` (`gpt-6.1-sol`, Ryan's ChatGPT subscription, not metered). First cooperative run on the clean draft (D42) and after the D40 flow fixes. Compare with skill-7fd1003 cooperative (cut off by the 24-turn cap, never closed).
+
+- 21 subject turns, **stopped by the sim** after Close. Checks: 18 pass, 10 skip, 0 fail. Judge: 9 of 11 pass, 2 fail (Q1, Q3). Sim check pass; sim judged in character.
+- **D40 fixes held.** Ideas at turn 11 (top idea in two sentences, picked), **one short try** in chat (turn 13: a tune-up price reply from `price-sheet.md`, prices correct, read with permission), then "Shall we stop here for today, or keep going?" once. Keep going → 6 answers (turns 14 to 19) → short check-back (turn 20) → **Close right after** (turn 21), with one try-this-week and a first question for next time. "Last session" is 3 lines. No new draft files.
+- **D42 clean draft: no frame breaks, no rule 13 noise.** Sam never asked whether the shop is real; the interviewer never warned about the draft. Sim judged in character.
+- **No regression on flow vs 7fd1003; it is better** (closed in 21 turns instead of hitting the cap; asked "keep going?" once, not twice).
+- **Judge Q3 fail: fair, minor.** Turn 6: "For the last bike collected, how did you check that the payment matched the invoice?" assumes a check the draft says Sam never has time for ("never has time to check"). Sam corrected it ("I don't match payments to invoices"). Same pattern failed Q3 in 7fd1003. Still a real habit.
+- **Judge Q1 fail: too strict; partial is fair.** Turns 3, 6, 7 and 8 ask about the last real event; Sam said "I don't remember" to three of them, and the interviewer reasonably moved to process questions. After keep-going, turns 15 to 19 are general ("What tends to slow you down...", "Roughly how many tags..."), which is where the judge's quote comes from.
+- **Real skill problem: the money worry was never explored with the files.** Sam said twice he does not match payments (turns 6, 17), the draft says he suspects mismatches, and `invoices-q3.csv` and `bank-export.csv` sit in the folder. The interviewer never offered to read them (7fd1003 did, at turn 13), and the "Match payments to invoices" card, which matched and was not an idea, was not offered (Ideas step 3). Ideas cover replies and tag typing only.
+- **Minor:** Sam's e-bike remark (turn 3) was parked but never returned to, and the draft's "a view on whether to add e-bike repair or pickup and delivery" got no question; keep-going went to the Monday typing Sam asked for, which is defensible.
+- **Minor:** `log.md` is one line per edit (36 bullets), as in every codex run.
+- Not tested: a card offer; reading the money files.

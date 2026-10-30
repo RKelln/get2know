@@ -1,0 +1,44 @@
+# The bike-shop case with codex (OpenAI models, Ryan's ChatGPT login) in every seat: interviewer,
+# Sam and the judge. A cross-vendor check against case.toml (Claude). Same scenario, sims, checks
+# and rubric. Two differences to keep in mind when comparing:
+# - codex cannot limit writes to profile/, only to the work folder; writes_only_inside_profile still checks.
+# - codex has no plain chat mode, so Sam and the judge run inside codex's own agent instructions.
+name = "get2know-bike-shop-codex"
+rubric = "rubric.md"
+answer_key = "fixture/answer-key.md"   # the judge only
+checks = "checks.py"
+runs_dir = "runs"
+
+[subject]
+adapter = "agent"
+seat = "codex"
+allowed_tools = ["Read", "Glob", "Grep", "Write(profile/**)", "Edit(profile/**)"]
+opening = "hi"   # each sim sets its own opening
+
+[scenario]
+folder = "fixture/shop"
+exclude = []   # the answer key sits in fixture/, outside this folder
+
+[variants]
+skill-debadcb = "variants/skill-debadcb"
+skill-ad837b0 = "variants/skill-ad837b0"
+skill-a95901c = "variants/skill-a95901c"
+skill-bbf621c = "variants/skill-bbf621c"
+skill-3a750e9 = "variants/skill-3a750e9"
+skill-359e816 = "variants/skill-359e816"
+skill-295cce8 = "variants/skill-295cce8"
+skill-7fd1003 = "variants/skill-7fd1003"
+skill-b717ab7 = "variants/skill-b717ab7"
+skill-087cee2 = "variants/skill-087cee2"
+
+[sims]
+seat = "codex"
+dir = "sims"
+frame = "frames/sim.md"
+
+[limits]
+max_turns = 24
+
+[judge]
+seat = "codex"
+default = false

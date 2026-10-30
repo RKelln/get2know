@@ -1,0 +1,43 @@
+# What checks.py expects, per session path. checks.py works out the path from each run
+# (see `_path` in checks.py): "full", "short" (the skill's "Short on time?" path) or "pause"
+# (stopped before Ideas). Edit numbers here; no code change needed. Every check that uses
+# these says in its evidence which path it saw and which numbers it used.
+
+[detect]
+early_turns = 2          # owner time words in the opening or the first N answers mean "short on time"
+
+[log]
+extra_lines = 3          # log entry may have (files changed) + this many bullet lines
+
+[quotes]
+pass_share = 0.9         # quotes_are_verbatim: share of new (said: ...) quotes found word for word in an owner turn
+partial_share = 0.7
+
+[path.full]
+min_ideas = 3            # numbered ideas in ideas.md
+max_ideas = 5
+min_problems = 3         # the person's stated problems quoted with (said: ...) in profile/
+cover = "both"           # ideas touch money/admin and customers: "both" or "either"
+idea_quote = "any"       # each idea's Why cites: "any" (a quote, file or draft) or "said" (a (said: ...) quote)
+
+[path.short]
+min_ideas = 1            # the skill aims for 1; more is not wrong if the owner stayed
+max_ideas = 5
+min_problems = 1
+cover = "either"
+idea_quote = "said"      # the one idea must rest on something the owner said this session
+
+[path.pause]
+min_problems = 1         # ideas, cover and check-back checks skip on this path
+
+# Overrides, by sim name or case name (meta.json "sim" / "case"). `path` forces the path;
+# a sub-table changes numbers for one path. Sim overrides win over case overrides.
+#
+# [sim.hurried]
+# path = "short"
+# [sim.hurried.short]
+# min_problems = 2
+#
+# [case."get2know-bike-shop-codex"]
+# [case."get2know-bike-shop-codex".full]
+# max_ideas = 4

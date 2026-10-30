@@ -1,0 +1,12 @@
+CITY HARDWARE
+Receipt R-10
+Date: 2026-09-02
+--------------------------------
+Shop towels                  14.99
+Zip ties                      6.49
+--------------------------------
+Subtotal                     21.48
+HST 13%                       2.79
+TOTAL                        24.27
+
+Paid: debit

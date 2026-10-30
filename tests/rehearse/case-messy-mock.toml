@@ -1,0 +1,35 @@
+# Free plumbing test for the messy-draft checks: a scripted agent that raises the stale lines well. Tests the
+# checks, not any model. Needs fixture/shop-messy/.
+name = "get2know-bike-shop-messy-mock"
+checks = "checks.py"
+runs_dir = "runs-mock"
+
+[subject]
+adapter = "agent"
+seat = "mock"
+allowed_tools = ["Read", "Write(profile/**)", "Edit(profile/**)"]
+opening = "hi"
+
+[scenario]
+folder = "fixture/shop-messy"
+exclude = []   # the answer key sits in fixture/, outside this folder
+
+[variants]
+baseline = ""
+
+[sims]
+seat = "mock"
+dir = "sims"
+frame = "frames/sim.md"
+
+[limits]
+max_turns = 4
+
+[mock]
+subject = [
+  { text = "Hi Sam. Your notes say Lena works 2 days a week in one place and three in another. Which is right now?", tool_calls = [{ name = "Read", arg = "./sam-profile-draft.md" }] },
+  { text = "Thanks. The old price list says a tune-up is $79, and another line says $89. Which do you charge?", write = { "profile/how-we-work.md" = "# Spoke and Chain: how we work\n## PEOPLE\n- Sam: owner, mechanic, bookkeeper, receptionist (draft)\n- Lena: part-time mechanic, three days a week (said: \"three days now\")\n## Money stuff\n- The courier pays 6 to 7 weeks late (file: shop-card.md)\n- CONFLICT: the courier pays ~a month late (draft) / 6 to 7 weeks late (file: shop-card.md)\n- CONFLICT: Open Tues-Sat 10-6 (draft) / Thurs 10-8 (draft)\n- GAP: biggest cost\n", "profile/limits.md" = "# limits\n## Never hand off\n- Talking to upset customers (said: \"I do that\")\n", "profile/README.md" = "# profile\nStarted from sam-profile-draft.md\n", "profile/interview-notes.md" = "# Interview notes\n## Last session\n- Ask first: storage fee, $3 or $5?\n" } },
+  { text = "Here is what I heard: Lena works three days, a tune-up is $89. Is anything wrong or missing?", write = { "profile/log.md" = "# Log\n\n## 2026-10-29: follow-up\n- how-we-work.md: Lena's days and the tune-up price settled; the old $79 price replaced by $89\n- limits.md: one limit\n" } },
+  "Done.",
+]
+sim = ["three days now", "89, the 79 was the old price", "no", "DONE"]

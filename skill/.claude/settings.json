@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(./profile/**)",
+      "Write(./profile/**)",
+      "Edit(./share/**)",
+      "Write(./share/**)"
+    ]
+  }
+}

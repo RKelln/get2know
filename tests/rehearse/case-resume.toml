@@ -1,0 +1,39 @@
+# Get2Know, cold resume: the same studio, with a profile/ left by a first session that paused before Ideas. A fresh agent must resume from interview-notes.md (ask its "Ask first" question), not restart from templates, and keep the older log entry.
+# Claude seats, as case.toml. See README.md.
+name = "get2know-collective-resume"
+rubric = "rubric-collective.md"
+answer_key = "keys/collective.md"   # the judge only
+checks = "checks.py"
+runs_dir = "runs"
+
+[subject]
+adapter = "agent"
+seat = "claude:opus"
+allowed_tools = ["Skill", "Read", "Glob", "Grep", "Write(profile/**)", "Edit(profile/**)"]
+opening = "hi"   # each sim sets its own opening
+
+[scenario]
+folder = "scenarios/collective-resume"
+exclude = ["**/.DS_Store"]
+
+[variants]
+skill-debadcb = "variants/skill-debadcb"
+skill-ad837b0 = "variants/skill-ad837b0"
+skill-a95901c = "variants/skill-a95901c"
+skill-bbf621c = "variants/skill-bbf621c"
+skill-3a750e9 = "variants/skill-3a750e9"
+skill-359e816 = "variants/skill-359e816"
+skill-295cce8 = "variants/skill-295cce8"
+skill-7fd1003 = "variants/skill-7fd1003"
+
+[sims]
+seat = "claude:sonnet"
+dir = "sims-resume"
+frame = "frames/sim.md"
+
+[limits]
+max_turns = 24
+
+[judge]
+seat = "claude:sonnet"
+default = false
