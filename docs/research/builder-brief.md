@@ -35,6 +35,29 @@ Checked 2026-10-29, at source (GitHub API for licences and files; project pages 
 - **Kiro's design.md / tasks.md**: architecture and tasks belong to the build step, in the build folder.
 - **Reader Testing with a sub-agent** (doc-coauthoring): useful, but not every harness has sub-agents and it doubles cost. Candidate for a rehearse check instead: give a fresh agent only the brief and limits, ask it what it would build and what it must never do.
 
+## Added 2026-10-30: Elephant-Goldfish Model (EGM)
+
+google/elephant-goldfish-model, commit 403d888 (2026-10-30), version 0.1.0, Apache-2.0. https://github.com/google/elephant-goldfish-model. Read at source: README, `docs/harnesses.md`, `docs/codex.md`, `TESTING.md`, the manifests, `egm-brainstorm`, `egm-review-loop`, `egm-resolve` and the comprehension persona. Its README says thousands of Google engineers use it. We have not run it.
+
+**What it is.** A plugin of skills for engineers designing a feature before coding. The "elephant" (the main agent, holding the project and the conversation) drafts a spec. The "goldfish" (fresh subagents that see only the document and the sources they are given, never the conversation) review it from several angles. The person resolves trade-offs, approves the design and decides what to build.
+
+**What is automatic and what is not.** Goldfish find problems; they do not fix them. In `egm-resolve` the elephant marks each finding PROPOSE FIX (the person accepts or rejects), CONTEST (the elephant thinks the reviewer is wrong) or ESCALATE (it "needs the user's knowledge, not only approval"), and stops for the person. There is an "accept all" option. Its README: "A review does not replace tests or human judgment."
+
+**Why it is not owner-ready as it stands.** The person in the loop is assumed to be an engineer: escalations come out in engineering terms, the brainstorm lenses are load, migration, on-call and tech debt, and two reviewers (codebase details, drift report) assume existing code. An owner's first tool usually has none. Its brainstorm rules ("never agree by default", "critique first") are the wrong tone for a nervous beginner.
+
+**Why it is still a good example.** `egm-review-loop` takes its reviewers and standards as file paths, so a project can supply its own. That allows an owner-facing set: "Does this break a line in `limits.md`?", "Could a spreadsheet do it?", "What does it cost each month, in dollars?", "What happens when it is wrong, and can the owner undo it?". The elephant settles the engineering findings and asks the owner only what the owner can judge, as plain trade-offs (cost vs speed, more work for the owner vs more for the tool). Our brief is its input, and the owner-approved tests are its exam.
+
+**Packaging practices worth copying** (see D56):
+- One copy of the skill text, with a thin manifest per harness (`.claude-plugin/`, `.codex-plugin/`, a root `plugin.json`). Users install with `claude plugin marketplace add <owner>/<repo>`. That needs a public repo.
+- Unit tests that fail when the manifests' name, version or description drift apart.
+- "Install the whole plugin": skills that read files outside their own folder break if only `skills/` is copied. We have one such read: `builder-brief/SKILL.md` reads `get2know/references/profile-folder.md`. A plugin moves that path (EGM uses `${CLAUDE_PLUGIN_ROOT}` on Claude, and "three folders above SKILL.md" on Codex).
+- A test that keeps each skill body under 24,000 bytes (Antigravity's limit). Ours: largest 12,441.
+- A per-skill `agents/openai.yaml` with a display name and icon for Codex.
+- A record of what has actually run end to end on each harness, kept apart from what is merely configured.
+- One-turn scenario files with regex pass/fail patterns (`test_scenarios.yaml`): far cheaper than a simulated interview.
+
+**Delegation lessons, if we use subagents.** Subagent tools differ by harness and version; EGM checks the tool's options at run time (on Codex it sets `fork_context: false`). It treats a missing read or a timed-out reviewer as an incomplete review, not a clean one. EGM stops when it cannot spawn a subagent; an interview must carry on without one.
+
 ## Copying and credit
 
 No text was copied from any source. Ideas are credited here. If a future version copies text from mattpocock/skills, spec-kit (MIT) or anthropics/skills (Apache-2.0), keep their licence notice next to it.
