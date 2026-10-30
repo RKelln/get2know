@@ -19,6 +19,7 @@ folder = "fixture/shop"
 exclude = []   # the answer key sits in fixture/, outside this folder
 
 [variants]
+skill-1a96fb7 = "variants/skill-1a96fb7"
 
 [sims]
 seat = "codex"
