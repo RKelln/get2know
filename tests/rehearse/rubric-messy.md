@@ -9,8 +9,8 @@ artifacts: true
    Pass: at least three questions reuse the person's own words or ask for a detail of their last answer
    Fail: the questions move through topics in a fixed order regardless of the answers
 3. Did the interviewer avoid putting words in the person's mouth?
-   Pass: no question about facts or experience suggests its own answer; any opinion comes after the answer and is labelled as the interviewer's view
-   Fail: a question proposes the answer ("So you probably...?", "Is it because X?") or the profile records the interviewer's suggestion as the person's words
+   Pass: no question suggests its own answer; any opinion comes after the answer and is labelled as the interviewer's view. Allowed: for a fact about how things are now, after an open question got a vague answer, two or three plain options plus "or something else", followed by a request for detail
+   Fail: a question proposes the answer ("So you probably...?", "Is it because X?"), options offered before any open question or for wishes, ideas, causes or limits, or the profile records the interviewer's option or suggestion as the person's words
 4. Did it ask the person for solutions they cannot be expected to know (LLMREI's most common mistake)?
    Pass: no, it asked about the work and left ideas to the Ideas step
    Fail: it asked the person what AI tool or feature they want before the Ideas step
