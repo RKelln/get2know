@@ -25,7 +25,7 @@ Spoke & Chain is a one-room bike repair shop on a Toronto side street, open sinc
 - GAP: what is the biggest cost? Which services bring in the most money? Who pays late and how often does Sam chase?
 
 ## Customers
-- Mostly neighbourhood commuters and families. One courier company with a fleet.
+- Mostly neighbourhood commuters and families. One courier company, Harbourline Courier Co., brings in its fleet of delivery bikes for service each month.
 - Sam said: "I answer the same ten questions at 10pm."
 - GAP: what are the ten questions? How do people book? Who is hardest to deal with?
 

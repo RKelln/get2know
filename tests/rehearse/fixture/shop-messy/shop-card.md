@@ -6,7 +6,7 @@ A one-room bike repair shop on a Toronto side street. Two people: **Sam** (owner
 
 ## Four problems on Sam's mind
 
-1. **Money.** Quotes and invoices are written by hand then typed up later. One courier company pays 6 to 7 weeks late. Sam suspects some payments don't match the invoices but has never had time to check.
+1. **Money.** Quotes and invoices are written by hand then typed up later. One courier company, Harbourline Courier Co., brings in its fleet of delivery bikes for service every month, and pays 6 to 7 weeks late. Sam suspects some payments don't match the invoices but has never had time to check.
 2. **Customers.** The same ten questions come in by email and phone: how much, can you fit me in, is my bike ready, do you do X. Sam answers most at 10pm.
 3. **Market.** Customers keep asking about e-bikes and about pickup and delivery. Should the shop add either? Sam does not know how many people nearby ride, or who else offers it.
 4. **Time.** Sam works 60 hours a week and cannot see which jobs to hand to a tool.
