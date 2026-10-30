@@ -18,6 +18,7 @@ folder = "fixture/shop-messy"
 exclude = []   # the answer key sits in fixture/, outside this folder
 
 [variants]
+skill-3748b8c = "variants/skill-3748b8c"
 skill-783dcdc = "variants/skill-783dcdc"
 skill-1a96fb7 = "variants/skill-1a96fb7"
 skill-5a483c6 = "variants/skill-5a483c6"
