@@ -101,7 +101,7 @@ First, for each task they said they want help with, check that you know how it i
 ## Ideas
 
 1. Read `references/opportunities.md` and follow it. If the did-you-know cards exist (`did-you-know/cards.md`, next to this skill), read them too and follow "Did you know cards" in `references/opportunities.md`.
-2. Write 3 to 5 ideas into `profile/ideas.md`. Tell the person the top one in two sentences, starting from what they do now ("You already have saved replies, so..."), then its "Another way" in one, and ask: "Does that one sound right to you, or would you pick another?" Record their answer as the idea's status.
+2. Write 3 to 5 ideas into `profile/ideas.md`. Tell the person the top one in two sentences, starting from what they do now ("You already have saved replies, so..."), then any "Another way" in one, and ask: "Does that one sound right to you, or would you pick another?" Record their answer as the idea's status.
 3. If a card matches something they said and is not already one of your ideas, offer it now: one per message, at most two. If none matches, skip this.
 4. Update "Last session" in `profile/interview-notes.md`, and write this session's log entry now (the **log check** in `references/profile-folder.md`), so it is saved even if the session ends suddenly.
 5. After at most one short try of the top idea, ask one question: "Shall we stop here for today, or keep going?" If the try waits on them (photos, a file), save it as the first thing for next time and still ask. Stop → **Close**. Keep going → about 6 more answers, starting with any worry or wish they (or the draft) named that has had no question yet, then the remaining gaps; a short check-back; then **Close** right away, even if a task is waiting on them (photos, a file): say it is saved as the first thing for next time. Ask "keep going?" only once per session; park anything new for next time.
@@ -215,7 +215,7 @@ Choose the shape first (above); the kind only names the help. Name which kind ea
 - Risk: <what could go wrong, plainly>
 - Guardrails (only for an idea that sends or acts on its own): <the allowed kinds of message; what it may never promise, such as a price or date not in the source; how it is labelled; where everything else goes; what it logs; how to switch it off>
 - Simplest version: <the smallest thing that would help>
-- Another way: <what a careful person could do instead, without this idea, and when that would be better>
+- Another way: <what a careful person could do instead, without this idea, and when that would be better. Look hard first: by hand, a spreadsheet or checklist, changing how the work is set up, someone else doing it. Only if none would truly work, write "none that works, because <reason>", and do not say it aloud>
 - Try this week: <one small step the person can do>
 - Status: idea, <date>   (idea, picked, trying, kept, dropped, with the date it was set: only the person changes this)
 ```
@@ -247,6 +247,7 @@ Include at least one line under the heading `### Not for AI` naming something fr
 
 - Is every idea tied to something the person said or a file showed?
 - Does every idea say how the task is done now, and build on it?
+- Does every "Another way" name a real alternative, or say plainly why none would work?
 - Does each idea take work off them, as far as their ceiling allows? Does every idea that sends or acts on its own state its guardrails?
 - Did I invent any number? If so, mark it `(guess, check)`.
 - Did I respect `limits.md`?

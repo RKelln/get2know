@@ -5,6 +5,7 @@ Newest first. Your version number is in the file `VERSION`. To update, see `UPDA
 ## Not released yet
 
 - **Asks for your records early.** When talk turns to money, customers or prices, it asks early if you keep anything that shows how it works now (invoices, a spreadsheet, a price list), naming a file it can see in the folder. It reads only after you say yes, and if you say no, it carries on by asking.
+- **Real alternatives only.** Each idea's "Another way" names a real alternative, or says plainly why there isn't one, instead of a weak one just to fill the line.
 
 ## 0.2.1 (2026-10-30)
 

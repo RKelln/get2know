@@ -48,7 +48,7 @@ Choose the shape first (above); the kind only names the help. Name which kind ea
 - Risk: <what could go wrong, plainly>
 - Guardrails (only for an idea that sends or acts on its own): <the allowed kinds of message; what it may never promise, such as a price or date not in the source; how it is labelled; where everything else goes; what it logs; how to switch it off>
 - Simplest version: <the smallest thing that would help>
-- Another way: <what a careful person could do instead, without this idea, and when that would be better>
+- Another way: <what a careful person could do instead, without this idea, and when that would be better. Look hard first: by hand, a spreadsheet or checklist, changing how the work is set up, someone else doing it. Only if none would truly work, write "none that works, because <reason>", and do not say it aloud>
 - Try this week: <one small step the person can do>
 - Status: idea, <date>   (idea, picked, trying, kept, dropped, with the date it was set: only the person changes this)
 ```
@@ -80,6 +80,7 @@ Include at least one line under the heading `### Not for AI` naming something fr
 
 - Is every idea tied to something the person said or a file showed?
 - Does every idea say how the task is done now, and build on it?
+- Does every "Another way" name a real alternative, or say plainly why none would work?
 - Does each idea take work off them, as far as their ceiling allows? Does every idea that sends or acts on its own state its guardrails?
 - Did I invent any number? If so, mark it `(guess, check)`.
 - Did I respect `limits.md`?
