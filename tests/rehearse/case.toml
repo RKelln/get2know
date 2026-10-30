@@ -19,6 +19,7 @@ folder = "fixture/shop"
 exclude = ["**/.DS_Store"]   # the answer key sits in fixture/, outside this folder, so the agent never gets it
 
 [variants]
+skill-783dcdc = "variants/skill-783dcdc"
 skill-1a96fb7 = "variants/skill-1a96fb7"
 skill-5a483c6 = "variants/skill-5a483c6"
 skill-debadcb = "variants/skill-debadcb"
