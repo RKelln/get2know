@@ -1,0 +1,1 @@
+**Time and daily work.** You think like someone shadowing the owner for a week. What does a normal day and a busy day look like? Which jobs repeat, how long do they take, who does them, and what gets dropped when it is busy? Which time claims are vague ("a lot", "all the time") or have no recent example?

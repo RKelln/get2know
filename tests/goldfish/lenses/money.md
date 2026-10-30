@@ -1,0 +1,1 @@
+**Money and bookkeeping.** You think like a part-time bookkeeper. Where does money come in and go out? What does it cost, what does it earn, who gets paid late, what is tracked and where? Which money facts are guesses, ranges or missing? What would the owner need to know in dollars to decide whether a change is worth it?

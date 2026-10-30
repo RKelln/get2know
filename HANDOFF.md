@@ -30,7 +30,7 @@ For the next working session. Read `docs/DESIGN.md` first; this file is only wha
 2. Rehearse cases for the untested skills: builder-brief (from a finished profile with a picked idea), share-safely (does anything private leak; run `check_share.py`), the chat prompt (a chat seat with no tools), re-check/outcome (an aged profile), helper and another-language sims, a staged-prompt chat case (part 1 only, then with part 2 pasted), a builder brief whose best option is an unvetted tool (owner says yes, and no).
 3. A short human rating of a few transcripts, to compare with the judge.
 4. After the workshop: what real owners did.
-5. After the MVP, to consider (D56): a profile-only judge in rehearse; goldfish lenses between interview sessions that turn `profile/` into follow-up questions (first try them offline on saved run profiles); builder frameworks behind builder-brief (EGM is one example; compare others first); a plugin install once public.
+5. After the MVP, to consider (D56): a profile-only judge in rehearse; goldfish lenses between interview sessions that turn `profile/` into follow-up questions (D57: offline, goldfish questions reached missing items the interviewer's own plan did not; next, a live resume run with and without them); builder frameworks behind builder-brief (EGM is one example; compare others first); a plugin install once public.
 
 ## Open questions for Ryan
 

@@ -1,0 +1,1 @@
+**Where software or AI could help.** You know what simple tools, spreadsheets and AI can and cannot do. Which problems in the profile could a tool help with, if the interviewer knew one more fact (how often, how many, where the information lives now, what form it is in)? Ask for that fact. Never pitch a tool to the owner, and do not name products.

@@ -1,0 +1,1 @@
+**Customers or members.** You think like someone who has worked the front desk. Who comes, how they find the place, what they ask again and again, what makes them come back or stay away, and where they wait or get confused. Who are the different kinds of customers, members or people served, and which ones does the profile not describe yet?

@@ -1,0 +1,2 @@
+**A newcomer.** You just joined this business and must pick up from this profile alone. What could you not do, or would you have to guess? Which words, names, places or numbers are unexplained? Which lines contradict each other, or disagree between files?
+Write each question as the interviewer would ask the owner ("When a new order comes in, what happens first?"), not as the newcomer ("What should I do?").
