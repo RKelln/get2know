@@ -38,7 +38,7 @@ One download: the zip on the project's Releases page (`get2know-<version>.zip`; 
 - `tools/`: builds the chat prompts (`dist/get2know-prompt.md`, `dist/chat/`), the manifest and the release zip (`python3 tools/build_all.py`; releasing: `docs/RELEASING.md`), and `update.py`.
 - `commons/`: seed records for the capability commons (CC0) and their checker.
 - `tests/rehearse/`: simulated interviews (a made-up bike shop, with clean and messy drafts, and a made-up non-profit), code checks and a judge rubric, using [`rehearse`](https://github.com/RKelln/rehearse). Everything needed to run them is in this repo.
-- `docs/DESIGN.md`: every decision and why (start here). `docs/capability-commons.md`: the commons proposal. `docs/research/`: sources checked.
+- `docs/DESIGN.md`: every decision and why (start here). `docs/design-builder-side.md`: the builder side, from an approved brief to a tool the owner keeps. `docs/capability-commons.md`: the commons proposal. `docs/research/`: sources checked.
 - `docs/REQUIREMENTS.md`, `docs/MVP-first-deployment.md`: the starting requirements and the first deployment.
 - `docs/prior-art-*.md`, `docs/design-considerations.md`: research memos, not specs.
 - `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, `docs/GOVERNANCE.md`: proposals, not yet decided; who hosts and stewards the project is open.
