@@ -70,7 +70,7 @@ The build is done when the owner can run it, not when the tests are green in the
 - **One real case:** the tool tried once on a copy of real work, with the owner watching.
 - **The write-back, left ready:** `ideas.md` and the brief's status (`building` → `in use`, or `dropped` with the reason). `handoff.md` step 7 already gives this to the owner.
 
-The teaching loop closes here: the owner explains the tool back in their own words (the brief's "In the owner's words"), and the builder writes down what they got wrong. If the owner cannot explain it, the tool is not done, it is being babysat.
+The builder explains what the tool does, shows the agreed checks on a real case using a copy, and leaves clear start, stop and undo steps. Clear explanation is the builder's job; do not require the owner to explain it back or pass a recall quiz (D68).
 
 ## Who the builder is
 
@@ -89,7 +89,7 @@ Rejected for now: a Get2Know *builder* skill. It would be a fifth skill in a fol
 3. **Real data too early.** The builder asks for the invoices to test with. Guard: made-up data or a copy first, always (`handoff.md` step 6).
 4. **A tool only the builder can run.** It lives in a folder the owner does not know, started with a command they will not remember. Guard: the one-page README and "who can fix it next year".
 5. **A silent subscription.** It needs an account or a paid key; the owner finds out in month two. Guard: cost stated before the trial.
-6. **The owner loses the feel for the job.** The tool works and the owner stops being able to spot when it is wrong. Guard: approving the tests and the teach-back. This is the failure the whole method exists to prevent.
+6. **The owner loses the feel for the job.** The tool works and the owner stops being able to spot when it is wrong. Guard: approving the tests and seeing the agreed checks demonstrated on a real case. This is the failure the whole method exists to prevent.
 7. **The builder over-promises.** "It could do X too" — a feature nobody approved, which then needs a test nobody wrote. Guard: unbriefed work goes to `Later, maybe` and is written down, not built.
 
 ## Open for Ryan

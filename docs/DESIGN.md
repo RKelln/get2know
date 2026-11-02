@@ -2,6 +2,12 @@
 
 Owner of this file: the design agent. Decisions, the reason for each, and what is still open. Newest decisions at the top of each section. Started 2026-10-28.
 
+## Brief closing: explain it for the owner (D68, Ryan, 2026-11-02)
+
+Plan: remove the closing teach-back questions, make the brief carry the plain explanation and trust checks, align the builder guidance, then regenerate and check the distribution. Follow-up: show the AI's proposed tests first, ask for any other checks needed before trust, and use that answer in test approval.
+
+Ryan's build test found that asking how they would explain the tool to a friend felt excessive and could feel bad. The agent owns clear explanation: every brief starts with what goes in, what the tool does and what the person gets, in short everyday sentences. The close states the checks and undo using the approved tests and limits; it does not ask the owner to repeat or explain them. Replace the required "In the owner's words" section with this useful summary, without passing agent prose off as an owner quote. Existing owner quotes may stay; no missing teach-back blocks a resumed brief. Acceptance-test approval and its concrete example remain. Ryan clarified that asking about trust is useful when grounded in the AI's proposed checks: show them first, then ask "What other checks would you need before you could trust this tool?" Accept "none" without fishing for more; let the owner correct a proposed check too, and update the tests and any before-use checks before approval. This replaces the generic wrong-or-missing question, rather than adding a second closing question. This supersedes the mandatory teach-back in D33 and D67 and the teaching-loop backlog item; the research memos remain proposals, not requirements. This is a product decision from Ryan's feedback, not a claim about learning research. No live model run performed for this change.
+
 ## Framing: describe before decide (Ryan, 2026-10-28)
 
 Get2Know captures **how the organization works now**, so a later agent can be most helpful. Build-planning tools like `grilling`/`to-spec` settle **decisions about something to be built**, which comes after. So:

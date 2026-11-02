@@ -2,6 +2,10 @@
 
 Newest first. Your version number is in the file `VERSION`. To update, see `UPDATE.md`.
 
+## Unreleased
+
+- **The brief explains the tool for you.** It starts with a short plain explanation and includes checks and undo steps. The closing questions asking you to explain it back are gone; the AI lists its proposed tests and asks what other checks you need before trusting the tool. You still approve what counts as working.
+
 ## 0.2.3 (2026-10-30)
 
 - **Ideas say what they are.** Each idea in `ideas.md` now starts with the idea itself in a sentence or two, then another way to do it, then why, how you do it now, and the rest. The "Simplest version" line is gone. Where more could be taken off you later, a "Where it could lead" line says where the idea is heading, in one sentence, within your limits.

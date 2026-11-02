@@ -14,6 +14,9 @@ Status: draft        (draft → tests approved <date> → building → in use �
 From: ideas.md, idea "<name>" (kind: <move>). Made <date> with Get2Know builder-brief.
 Read first: ../README.md and ../limits.md. limits.md wins over this brief.
 
+## What this tool will do
+<2-3 short, everyday sentences: what goes in, what it does, and what the person gets. Use the agreed scope and evidence marks; this is your explanation, not an owner quote.>
+
 ## The problem
 <2-4 lines in the owner's words, each with its mark. One real example if there is one.>
 
@@ -50,8 +53,8 @@ Approved by the owner: <date> (said: "...")   (or: "Not yet approved: do not sta
 - OPEN: <a choice the build-planning step should settle with the owner, e.g. "a weekly list, or a list when asked?">
 - GAP: <a fact still unknown, and who could answer it>
 
-## In the owner's words
-<their teach-back, quoted> (said: "...")
+## Before using it
+<Checks from the approved tests and limits, and how to stop or undo it. State these plainly; do not ask the owner to repeat them.>
 
 ## For the builder
 - Read ../README.md, ../limits.md, then this brief. The owner is not a programmer: plain words, one question at a time.

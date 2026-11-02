@@ -52,21 +52,20 @@ Tell the owner in two or three lines what the brief says the tool will do, and t
 ### 4. The owner approves the tests (never skip)
 
 This is the one job that keeps the owner in charge of the tool (see `references/tests.md`).
-1. Show the acceptance tests: plain lines, numbered, 8 or fewer. Say what they are for: "These are the checks that say the tool works. A builder must pass all of them before you use it on real work."
-2. Ask: "Is any of these wrong, or is anything missing?" Fix the brief with what they say. Repeat until they say the tests are right.
+1. Show your proposed acceptance tests: plain lines, numbered, 8 or fewer, covering the job, limits, things going wrong, and undo. Say: "These are the checks I think this tool needs to pass before you use it on real work. You can change any that seem wrong."
+2. Ask: "What other checks would you need before you could trust this tool?" Then wait. Accept "none"; do not push for more. Add their checks and fix any they correct. Put checks for the builder under "Acceptance tests" and checks needed before use under "Before using it". Show any revised checks and get their approval before recording the tests as approved.
 3. Ask them to make one test their own: "Think of a real time this went wrong. What should the tool have done?" Write their example under the test it fits, with `(said: ...)`. If they cannot think of one, offer to make up an example and ask if it is right.
 4. Set `Status: tests approved <date>` and add `Approved by the owner (said: "...")` under the tests.
 
 If they will not approve now, leave `Status: draft` and say plainly that a builder should not start until they do.
 
-### 5. Say it back (teach-back)
+### 5. Explain the tool and its checks
 
-Ask two questions, one message each, and wait for each answer:
-1. "Before we finish: how would you explain to a friend what this tool will do?"
-2. "What will you check before you trust it?"
-- Write their answers under "In the owner's words", with `(said: ...)`.
-- If they missed something important (often: the check, or the undo), say the one thing in one sentence. Do not quiz again.
-- Then name the kind of help this is (read, draft, check, sort, watch, connect, build) in one line, so they can spot it elsewhere: "This is a *check it* job: AI compares two things and you look at what does not match."
+You own the plain explanation. Do not ask the owner to explain the tool back, describe it to a friend, or repeat what they will check before trusting it.
+- Every brief starts with "What this tool will do": two or three short, everyday sentences saying what goes in, what it does, and what the person gets. Use the agreed scope; define any new term.
+- Under "Before using it", write the checks from the approved tests and limits, plus how to stop or undo it. Leave unknowns marked; do not invent duties for the owner.
+- Close with this explanation and the key check in plain words, combined with the handoff below. No extra recall questions.
+- When resuming an older brief, keep any existing owner quotes. A missing "In the owner's words" section never blocks completion; use the new sections instead.
 
 ### 6. Hand off and close
 

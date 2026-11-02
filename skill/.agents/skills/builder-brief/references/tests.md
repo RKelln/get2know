@@ -32,4 +32,4 @@ Under a test, add a **worked example** when you have one: a small input and the 
 
 ## Getting a real approval, not a nod
 
-A quick "looks fine" is not yet approval. Show the tests, ask what is wrong or missing, fix them, then ask the owner to tie one test to a real time this went wrong. Their example goes under that test. Only then write `Approved by the owner`, with their words.
+A quick "looks fine" is not yet approval. Show the AI's proposed tests first and say they can change any that seem wrong. Ask: "What other checks would you need before you could trust this tool?" Accept "none" without pushing. Add their checks, fix any they correct, and get approval for revised checks. Checks needed before use also go under "Before using it". Then ask the owner to tie one test to a real time this went wrong. Their example goes under that test. Only then write `Approved by the owner`, with their words.
