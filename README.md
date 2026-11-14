@@ -2,11 +2,12 @@
 
 **Open-source onboarding for small organizations, at scale.** An AI interviewer gets to know a small business or non-profit well enough to write down how it actually works. Then it helps the owner find what AI can do for them, preferring open tools they can own, change and share. What the organization learns stays in its own plain-text folder; what the community learns flows into a shared, open commons.
 
-**Status (2026-10-29): early, working, not yet used by a real person.**
-- **Built:** skills in `skill/` for the interview (first interview, follow-up from notes, resume, re-check, outcome check, helper mode, other languages, more than one voice; owner-editable settings), "did you know" cards, a builder brief, and share-safely. A one-prompt version for any chat app, an experimental three-part version, and a versioned zip with safe updates.
+**Status (2026-11-14, version 0.2.4): early and working. Used in a library workshop (participants played a made-up owner), which went well; not yet used by an owner on their own business.**
+- **Built:** skills in `skill/` for the interview (first interview, follow-up from notes, resume, re-check, outcome check, helper mode, other languages, more than one voice; owner-editable settings), "did you know" cards, a builder brief, and share-safely, and an experimental `teach-a-job` (show it one job and it writes the job down as a skill). A one-prompt version for any chat app, an experimental three-part version, and a versioned zip with safe updates.
 - **Tested in simulation** with `rehearse` (one model plays the owner, another interviews, a third judges, plus code checks): a made-up bike shop (cooperative, vague, guarded, hostile, hurried and low-literacy owners; clean and messy notes) and a made-up non-profit (first interview, resume, a planted instruction in an email). Recent rounds pass most checks; the open problems are listed in `docs/DESIGN.md`.
-- **Not yet tested with any model:** the builder brief, share-safely, the chat prompts, the re-check, outcome, helper, language and more-than-one-voice modes.
-- **First real use:** a library workshop on 2026-11-02.
+- **Not yet tested with any model:** `teach-a-job`, the builder brief, share-safely, the chat prompts, the re-check, outcome, helper, language and more-than-one-voice modes.
+- **Planned:** kinds of limit (a rule, theirs to keep, a trust call) and how trust is earned (`docs/DESIGN.md` D66, `docs/research/limits-and-trust.md`).
+- **First use:** a library workshop on 2026-11-02, with a repeat planned for 2026-11-30.
 - **The commons** is a proposal (`docs/capability-commons.md`) with 43 seed records in `commons/`, none vetted yet.
 
 ## The idea

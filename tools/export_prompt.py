@@ -40,7 +40,7 @@ OUT = DIST / "get2know-prompt.md"
 CHAT_DIR = DIST / "chat"
 # Where the staged parts can be fetched from, e.g. "https://raw.githubusercontent.com/OWNER/REPO".
 # Empty: build paste-only parts. Links are always pinned to the tag v<version>, never a branch.
-BASE_URL = ""
+BASE_URL = "https://raw.githubusercontent.com/RKelln/get2know"
 ADAPTER = TOOLS / "chat-adapter.md"
 SPLIT = "---8<--- the skill files go here ---8<---"
 SKILLS_DIR = SKILL / ".agents" / "skills"

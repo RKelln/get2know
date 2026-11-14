@@ -1,6 +1,6 @@
 # Limits and trust (design notes, 2026-10-30)
 
-**Status.** Design and research to do before the first public release. Not needed for the first workshop, and not in the skill yet (DESIGN D66). The sources below are from memory and **not yet checked** at their primary sources; check them before citing them in `DESIGN.md`.
+**Status.** Planned for 0.3; the repo went public without it. Not needed for the first workshop, and not in the skill yet (DESIGN D66). The sources below are from memory and **not yet checked** at their primary sources; check them before citing them in `DESIGN.md`.
 
 ## The problem
 

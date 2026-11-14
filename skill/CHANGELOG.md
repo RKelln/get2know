@@ -2,7 +2,9 @@
 
 Newest first. Your version number is in the file `VERSION`. To update, see `UPDATE.md`.
 
-## Unreleased
+## 0.2.4 (2026-11-14)
+
+- **`teach-a-job` is experimental.** It has not been run with a model yet; expect rough edges and tell us what you find.
 
 - **Teach it a job.** A new skill, `teach-a-job`. Show the assistant one real job, one step at a time, and it asks whenever it would be guessing. Then it writes the job down as a skill, and installs it if you say yes, so a new chat knows how. It also asks which of your rules you bend, and whether it should hold to them or bring those cases to you.
 - **A named job no longer starts the interview.** If you already have a profile and ask for a job, it does the job. It reads your limits first, and offers a check-in afterward if one is due.
