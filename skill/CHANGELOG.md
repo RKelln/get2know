@@ -4,6 +4,10 @@ Newest first. Your version number is in the file `VERSION`. To update, see `UPDA
 
 ## Unreleased
 
+- **Teach it a job.** A new skill, `teach-a-job`. Show the assistant one real job, one step at a time, and it asks whenever it would be guessing. Then it writes the job down as a skill, and installs it if you say yes, so a new chat knows how. It also asks which of your rules you bend, and whether it should hold to them or bring those cases to you.
+- **A named job no longer starts the interview.** If you already have a profile and ask for a job, it does the job. It reads your limits first, and offers a check-in afterward if one is due.
+- **A brief for your assistant.** You can write `profile/assistant-brief.md`, and every new chat in the folder reads it first.
+- **Drafts.** Work the assistant does for you goes in a `drafts` folder for you to read and send.
 - **The brief explains the tool for you.** It starts with a short plain explanation and includes checks and undo steps. The closing questions asking you to explain it back are gone; the AI lists its proposed tests and asks what other checks you need before trusting the tool. You still approve what counts as working.
 
 ## 0.2.3 (2026-10-30)

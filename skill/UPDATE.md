@@ -13,9 +13,10 @@ Use this if you have never changed Get2Know's own files (most people).
 
 1. Download the new Get2Know zip file (from the project's Releases page on GitHub). Double-click it. You get a new folder called `get2know`.
 2. Open your old Get2Know folder, the one with your `profile` folder in it.
-3. Drag your `profile` folder into the new `get2know` folder. Do the same with a `share` folder, and any files of your own you added, if you have them.
+3. Drag your `profile` folder into the new `get2know` folder. Do the same with a `share` folder, a `drafts` folder, and any files of your own you added, if you have them.
 4. From now on, open the new folder in your AI tool, instead of the old one.
 5. Check that your `profile` folder is there and has your files. Then you can delete the old folder.
+6. If you taught it any jobs, they need installing again. Open the new folder in your AI tool and say "install my skills again". Your skills are safe in `profile/skills/`.
 
 If you did change Get2Know's own files (for example, you changed a number in `SETTINGS.md`, or added your own cards to `cards.md`), the easy way loses those changes. Use the careful way.
 

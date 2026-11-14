@@ -6,7 +6,7 @@ Every rule in `SKILL.md` still holds here: one question per message, short and p
 
 When `profile/` exists, read `profile/log.md` and `profile/interview-notes.md` first. Then:
 1. **Their words win.** "Carry on", "where were we?" → **Resume**. "Things have changed", "update it", "it's been a while" → **Re-check**. "I tried it" → **Outcome check**.
-2. **Otherwise, the dates.** Read `SETTINGS.md` at the top of this folder (next to `profile/`; no need to ask) for two numbers of days: **Outcome check after** and **Re-check after**. If the file is missing, or a number is missing or unclear, use 14 days for the first and 30 for the second. Use today's date and the newest entry in `log.md` that is not a `brief` (a `brief` entry is a builder-brief session, not an interview). No such entry yet means the first session was cut short: Resume.
+2. **Otherwise, the dates.** Read `SETTINGS.md` at the top of this folder (next to `profile/`; no need to ask) for two numbers of days: **Outcome check after** and **Re-check after**. If the file is missing, or a number is missing or unclear, use 14 days for the first and 30 for the second. Use today's date and the newest entry in `log.md` that is not a `brief` or `skill` (those are builder-brief and teach-a-job sessions, not interviews). No such entry yet means the first session was cut short: Resume.
    - An idea in `ideas.md` is `picked` or `trying`, and its status date is **Outcome check after** days ago or more → **Outcome check** first, then go on below.
    - That entry is **Re-check after** days old or more → **Re-check**.
    - Otherwise → **Resume** (in `SKILL.md`).

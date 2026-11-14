@@ -19,7 +19,7 @@ DIST = REPO / "dist"
 
 MANIFEST_NAME = "MANIFEST.sha256"
 # Top-level folders that belong to the owner. Never shipped, never touched by update.py.
-OWNER_DIRS = {"profile", "share", "updates-to-review"}
+OWNER_DIRS = {"profile", "share", "drafts", "updates-to-review"}
 SKIP_NAMES = {".DS_Store", "__pycache__", "Thumbs.db", MANIFEST_NAME}
 SKIP_SUFFIXES = (".pyc", ".swp", "~")
 # Extra files placed in the shipped folder: published path -> source.

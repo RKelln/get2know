@@ -69,6 +69,11 @@ REWRITES: list[tuple[str, str]] = [
     (r"\.agents/skills/", ""),
     # SETTINGS.md sits at the top of the folder; in a chat it is included below.
     (r" at the top of this folder \(next to `profile/`; no need to ask\)", " (included below)"),
+    # teach-a-job needs files and an install, so chat prompts do not carry it (D68).
+    (r" \*\*Exception:\*\* if it names a job[^\n]*?when the job is done\.", ""),
+    (r" If it is a job they do again and again, say once that they can teach it to you later\.", ""),
+    (r"`brief` or `skill` \(those are builder-brief and teach-a-job sessions, not interviews\)",
+     "`brief` (a `brief` entry is a builder-brief session, not an interview)"),
 ]
 
 # Sections dropped from a file: (published name, heading line). The section runs
@@ -81,7 +86,7 @@ DROP_SECTIONS = [
 LEFTOVER_PATTERNS = [
     r"file tools", r"write and edit tools", r"edit tools", r"shell command",
     r"\b(?:Read|Write|Edit|Bash|Glob|Grep) tool", r"\bgit\b", r"Claude Code", r"\bCodex\b",
-    r"\.agents/", r"\.claude/", r"settings\.json",
+    r"\.agents/", r"\.claude/", r"settings\.json", r"teach-a-job",
 ]
 
 

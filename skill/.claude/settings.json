@@ -3,6 +3,8 @@
     "allow": [
       "Edit(./profile/**)",
       "Write(./profile/**)",
+      "Edit(./drafts/**)",
+      "Write(./drafts/**)",
       "Edit(./share/**)",
       "Write(./share/**)"
     ]

@@ -28,6 +28,7 @@ The brief goes in `profile/briefs/<slug>.md` (the slug is the idea's short name 
 - Reading `profile/` needs no asking; it was made for this. Read `profile/README.md`, `limits.md`, `ideas.md`, then `how-we-work.md`. Read the profile format at `.agents/skills/get2know/references/profile-folder.md` if it is there.
 - **No `profile/` folder** → say the brief needs one, and suggest starting the Get2Know interview first ("type hi"). Stop.
 - **Which idea.** Use the idea with `Status: picked` (or `trying`). If there are several, or none, list the ideas by name in one message and ask which one. If the owner names an idea that is not picked yet, ask if they want to pick it; on yes, set it to `Status: picked, <today's date>` and note it in the log. Only the owner changes a status.
+- **The idea is a job the assistant could just do**, with nothing to build (drafting the same message each week, sorting the same list) → say so in one line and ask if they want to teach it instead. On yes, follow `.agents/skills/teach-a-job/SKILL.md`, if its folder is there. A built tool and a taught skill also work together: a skill can run the tool.
 - **A brief already exists** for this idea → read it, say its status in one line, and carry on from where it stopped. Never start it over.
 
 ### 2. Fill only the gaps that block the brief

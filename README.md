@@ -34,7 +34,7 @@ One download: the zip on the project's Releases page (`get2know-<version>.zip`; 
 
 ## What is here
 
-- `skill/`: the skill folder people use. `AGENTS.md` at the top; skills in `.agents/skills/` (`get2know`, `did-you-know`, `builder-brief`, `share-safely`), linked as `.claude/skills/`. `VERSION`, `CHANGELOG.md`, `UPDATE.md`.
+- `skill/`: the skill folder people use. `AGENTS.md` at the top; skills in `.agents/skills/` (`get2know`, `did-you-know`, `builder-brief`, `share-safely`, `teach-a-job`), linked as `.claude/skills/`. `VERSION`, `CHANGELOG.md`, `UPDATE.md`.
 - `tools/`: builds the chat prompts (`dist/get2know-prompt.md`, `dist/chat/`), the manifest and the release zip (`python3 tools/build_all.py`; releasing: `docs/RELEASING.md`), and `update.py`.
 - `commons/`: seed records for the capability commons (CC0) and their checker.
 - `tests/rehearse/`: simulated interviews (a made-up bike shop, with clean and messy drafts, and a made-up non-profit), code checks and a judge rubric, using [`rehearse`](https://github.com/RKelln/rehearse). Everything needed to run them is in this repo.

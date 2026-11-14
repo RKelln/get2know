@@ -33,7 +33,7 @@ import tempfile
 from pathlib import Path, PurePosixPath
 
 MANIFEST = "MANIFEST.sha256"
-OWNER_DIRS = {"profile", "share", "updates-to-review"}
+OWNER_DIRS = {"profile", "share", "drafts", "updates-to-review"}
 REVIEW_DIR = "updates-to-review"
 
 

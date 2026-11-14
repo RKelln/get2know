@@ -34,7 +34,7 @@ import os
 import re
 import sys
 
-TEXT_EXTENSIONS = {".md", ".txt", ".csv", ".tsv", ".json", ".yaml", ".yml", ".toml", ".html", ""}
+TEXT_EXTENSIONS = {".md", ".txt", ".csv", ".tsv", ".json", ".yaml", ".yml", ".toml", ".html", ".py", ".sh", ""}
 
 # ---------------------------------------------------------------- patterns
 
