@@ -15,10 +15,10 @@ ed3ff475e7c01d8f1c4253fa51bdbc31e567209786240e8f5edd865521c8823a  .agents/skills
 aad0b6f5ceccd7ffc69fd0fa61d4606002f8f5d1be5ee9706c15b90dfc4d19f0  .agents/skills/share-safely/SKILL.md
 d405a6e2405470c5299f0c9fb38f733d24946d177b7d8a9c11853ea9302aefa0  .agents/skills/share-safely/references/commons-records.md
 717687552a77f78b96ce37cee3ebc24235ff41730b6110fe9a93018d1c60b5b5  .agents/skills/share-safely/scripts/check_share.py
-f4424ef2d457fc753f181537924ce75bd7d8a20d9e0228fbf26b7dd84afe4f83  .agents/skills/teach-a-job/SKILL.md
+a9b6468ac65fe7d560b837847c561ce532a3a5b06e893b26e92c5d22bb47ffe5  .agents/skills/teach-a-job/SKILL.md
 40a4b6e7a7301070c0106a5a8a9092bc40350f4471ddcbcfa102260f82c9f209  .agents/skills/teach-a-job/references/assistant-brief.md
 5ba6814e807250be5eedb1d4d4449fed6f4598a2d5220fbe61f633a026362817  .agents/skills/teach-a-job/references/skill-format.md
-40b2ba4b9a37c6b6c6ddee84221cd1dc03d0403a352294ae6a4c0ea222ddb197  .agents/skills/teach-a-job/scripts/install_skill.py
+37da76146488fae271eb9908c29bd2a0e9f4a199af841c19ada69d6ba9fee311  .agents/skills/teach-a-job/scripts/install_skill.py
 4ac9ac4b918edb9a83ef1c32d0f61de9a3c427d9460613e78816a9b562da2b4c  .claude/settings.json
 89a228ee457586bec0eb82539ae29392aa3ece69a024be13c83a68e188ebb469  AGENTS.md
 a6b73c53531d9619f427b292202418f7465a3e4956ad027f97ea7f1e0c3c3eda  CHANGELOG.md

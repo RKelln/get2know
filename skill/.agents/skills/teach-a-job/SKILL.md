@@ -79,7 +79,7 @@ Show the skill's description and what it will read, do and never do, in a few li
 
     python3 .agents/skills/teach-a-job/scripts/install_skill.py <name>
 
-The script checks the skill and copies it to `.agents/skills/<name>/`. The copy is plain and safe to delete. It is the default because each change then needs a new yes. If they use another AI tool, or keep their skills somewhere else, ask where, and add `--target <folder>`. Add `--link` only if they ask for a link, and tell them that with a link, later changes take effect with no new install.
+The script checks the skill and copies it to `.agents/skills/<name>/` and `.claude/skills/<name>/` (one folder when the kit links them), so Claude Code, Codex and OpenCode all find it. The copy is plain and safe to delete. It is the default because each change then needs a new yes. If they use another AI tool, or keep their skills somewhere else, ask where, and add `--target <folder>` (that folder only), or `--agents-only` to skip `.claude/skills`. Add `--link` only if they ask for a link, and tell them that with a link, later changes take effect with no new install.
 
 If they say no, or the tool cannot run a script, the skill still works by name: "Read `profile/skills/<name>/SKILL.md` and follow it."
 

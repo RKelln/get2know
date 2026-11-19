@@ -53,6 +53,24 @@ class InstallSkill(unittest.TestCase):
         self.assertFalse(self.installed().is_symlink())
         self.assertEqual((self.installed() / "count.py").read_text(), "print(1)\n")
 
+    def test_installs_into_claude_skills_too_unless_agents_only(self):
+        self.add()
+        code, out, _ = self.run_it("late-reminders")
+        self.assertEqual(code, 0)
+        self.assertTrue((self.kit / ".claude" / "skills" / "late-reminders" / "SKILL.md").is_file())
+        self.add(name="other-job")
+        self.run_it("other-job", "--agents-only")
+        self.assertTrue(self.installed("other-job").is_dir())
+        self.assertFalse((self.kit / ".claude" / "skills" / "other-job").exists())
+
+    def test_claude_skills_link_to_agents_skills_installs_once(self):
+        self.add()
+        (self.kit / ".claude").mkdir()
+        os.symlink("../.agents/skills", self.kit / ".claude" / "skills")
+        code, out, _ = self.run_it("late-reminders")
+        self.assertEqual(code, 0)
+        self.assertEqual(out.count("Installed"), 1)
+
     def test_copy_does_not_follow_later_changes_until_reinstalled(self):
         source = self.add()
         self.run_it("late-reminders")
@@ -140,7 +158,7 @@ class InstallSkill(unittest.TestCase):
         self.assertEqual(code, 0)
         self.assertTrue(self.installed("late-reminders").is_dir())
         self.assertTrue(self.installed("weekly-note").is_dir())
-        self.assertEqual(out.count("Installed"), 2)
+        self.assertEqual(out.count("Installed"), 4)  # two skills, two skill folders
 
     def test_all_changes_nothing_if_one_is_bad(self):
         self.add("late-reminders")

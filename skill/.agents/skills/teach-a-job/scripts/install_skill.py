@@ -3,9 +3,14 @@
 
     python3 .agents/skills/teach-a-job/scripts/install_skill.py <name>
     python3 .agents/skills/teach-a-job/scripts/install_skill.py --all
-    ... --target <folder>   install somewhere else (another AI tool's skills folder)
+    ... --target <folder>   install only into that skills folder (another AI tool's)
+    ... --agents-only       install only into .agents/skills (the old behaviour)
     ... --link              make a link, not a copy
     ... --dry-run           say what would happen, change nothing
+
+By default a skill goes into .agents/skills (OpenCode, Codex and others) and
+.claude/skills (Claude Code). If .claude/skills is a link to .agents/skills, as
+this kit ships it, that is one folder and it is installed once.
 
 Run it only after the person says yes. profile/skills/ stays the master copy.
 Standard library only. It never touches the network, or the skills this kit ships.
@@ -123,14 +128,27 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description="Install a taught skill, after the person says yes.")
     parser.add_argument("name", nargs="?", help="the skill's folder name in profile/skills/")
     parser.add_argument("--all", action="store_true", help="install every skill in profile/skills/")
-    parser.add_argument("--target", help="the skills folder to install into (default: .agents/skills in this folder)")
+    parser.add_argument("--target", help="install only into this skills folder (default: .agents/skills and .claude/skills in this folder)")
+    parser.add_argument("--agents-only", action="store_true", help="install only into .agents/skills, not .claude/skills")
     parser.add_argument("--link", action="store_true", help="make a link, not a copy")
     parser.add_argument("--dry-run", action="store_true", help="say what would happen, change nothing")
     parser.add_argument("--kit", help=argparse.SUPPRESS)  # tests only
     args = parser.parse_args(argv)
 
     kit = Path(args.kit).resolve() if args.kit else kit_folder()
-    target = Path(args.target).expanduser().resolve() if args.target else kit / ".agents" / "skills"
+    if args.target:
+        targets = [Path(args.target).expanduser().resolve()]
+    else:
+        targets = [kit / ".agents" / "skills"]
+        if not args.agents_only:
+            targets.append(kit / ".claude" / "skills")
+        seen, unique = set(), []
+        for t in targets:  # .claude/skills may be a link to .agents/skills: one folder, install once
+            real = os.path.realpath(t)
+            if real not in seen:
+                seen.add(real)
+                unique.append(t)
+        targets = unique
     try:
         if args.all == bool(args.name):
             raise Stop("Give one skill's name, or --all.")
@@ -142,10 +160,12 @@ def main(argv=None):
         else:
             names = [args.name]
         # Check everything before changing anything.
-        for name in names:
-            install_one(kit, target, name, args.link, dry_run=True)
-        for name in names:
-            print(install_one(kit, target, name, args.link, args.dry_run))
+        for target in targets:
+            for name in names:
+                install_one(kit, target, name, args.link, dry_run=True)
+        for target in targets:
+            for name in names:
+                print(install_one(kit, target, name, args.link, args.dry_run))
     except Stop as stop:
         print(f"Not installed: {stop}", file=sys.stderr)
         return 1
